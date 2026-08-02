@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { ScrollReveal } from './ScrollReveal';
 
 export const FAQSection: React.FC = () => {
   const { setIsBookingOpen } = useShop();
@@ -47,6 +48,7 @@ export const FAQSection: React.FC = () => {
     >
       <div className="container" style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
+        <ScrollReveal animation="fade-up">
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#E6C687', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
             <HelpCircle size={14} />
@@ -65,8 +67,10 @@ export const FAQSection: React.FC = () => {
             Frequently Asked Questions
           </h2>
         </div>
+        </ScrollReveal>
 
         {/* Minimal Accordion List (5 Items for Artificial Jewelry) */}
+        <ScrollReveal animation="fade-up" delay={150}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -140,6 +144,7 @@ export const FAQSection: React.FC = () => {
             );
           })}
         </div>
+        </ScrollReveal>
 
         {/* Minimal Sub-Link */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>

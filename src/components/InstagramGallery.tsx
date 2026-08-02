@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Heart, MessageCircle, ExternalLink, CheckCircle, Sparkles, ArrowRight } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 export const InstagramGallery: React.FC = () => {
   const instagramUrl = 'https://www.instagram.com/shop.scarletpk/';
@@ -60,13 +61,12 @@ export const InstagramGallery: React.FC = () => {
         style={{
           position: 'absolute',
           top: '50%',
-          right: '10%',
-          transform: 'translateY(-50%)',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
           width: '600px',
-          height: '400px',
-          background: 'radial-gradient(circle, rgba(230, 198, 135, 0.09) 0%, transparent 70%)',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(230, 198, 135, 0.08) 0%, rgba(0, 0, 0, 0) 70%)',
           pointerEvents: 'none',
-          zIndex: 0,
         }}
       />
 
@@ -82,6 +82,7 @@ export const InstagramGallery: React.FC = () => {
           className="insta-social-grid"
         >
           {/* Left Column: Live Instagram Profile Card Mockup */}
+          <ScrollReveal animation="slide-left" delay={0}>
           <div
             style={{
               backgroundColor: '#070A08',
@@ -218,8 +219,10 @@ export const InstagramGallery: React.FC = () => {
               <ArrowRight size={15} />
             </a>
           </div>
+          </ScrollReveal>
 
           {/* Right Column: 4 Tilted Polaroid Social Post Cards */}
+          <ScrollReveal animation="slide-right" delay={200}>
           <div>
             <div style={{ marginBottom: '1.8rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#E6C687', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
@@ -326,6 +329,7 @@ export const InstagramGallery: React.FC = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
 

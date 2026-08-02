@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useShop } from '../context/ShopContext';
 import { Heart, ShoppingBag, ArrowRight } from 'lucide-react';
 import { Product } from '../types/jewelry';
+import { ScrollReveal } from './ScrollReveal';
 
 export const WatchCollection: React.FC = () => {
   const { 
@@ -184,69 +185,71 @@ export const WatchCollection: React.FC = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container" style={{ maxWidth: '1360px', margin: '0 auto', position: 'relative', zIndex: 1, overflow: 'hidden' }}>
-        {/* Section Header Row */}
-        <div style={{ marginBottom: '2.5rem' }}>
-          <span
-            style={{
-              color: '#E6C687',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              display: 'block',
-              marginBottom: '0.4rem',
-            }}
-          >
-            LUXURY TIMEPIECES
-          </span>
-
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-end',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              gap: '1.2rem',
-            }}
-          >
-            <h2
-              style={{
-                fontSize: 'clamp(2rem, 3.8vw, 3rem)',
-                fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-                fontWeight: 500,
-                color: '#FFFFFF',
-                lineHeight: 1.15,
-              }}
-            >
-              Signature Watch Collection
-            </h2>
-
-            {/* Right: View All Watches Link */}
-            <a
-              href="#watch-collection-section"
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveCategory('watches');
-              }}
+        {/* Section Header with Title & View All */}
+        <ScrollReveal animation="fade-up">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span
               style={{
                 color: '#E6C687',
-                fontSize: '0.78rem',
-                fontWeight: 600,
-                letterSpacing: '0.12em',
+                fontSize: '0.75rem',
+                fontWeight: 700,
+                letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.4rem',
-                transition: 'opacity 0.2s ease',
+                display: 'block',
+                marginBottom: '0.4rem',
               }}
-              className="view-all-link"
             >
-              <span>VIEW ALL WATCHES</span>
-              <ArrowRight size={15} />
-            </a>
+              LUXURY TIMEPIECES
+            </span>
+
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: '1.2rem',
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: 'clamp(2rem, 3.8vw, 3rem)',
+                  fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
+                  fontWeight: 500,
+                  color: '#FFFFFF',
+                  lineHeight: 1.15,
+                }}
+              >
+                Signature Watch Collection
+              </h2>
+
+              {/* Right: View All Watches Link */}
+              <a
+                href="#watch-collection-section"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveCategory('watches');
+                }}
+                style={{
+                  color: '#E6C687',
+                  fontSize: '0.78rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  transition: 'opacity 0.2s ease',
+                }}
+                className="view-all-link"
+              >
+                <span>VIEW ALL WATCHES</span>
+                <ArrowRight size={15} />
+              </a>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* 5 Watch Product Cards in 1 Row - Visual Sliding Carousel */}
         <div style={{ width: '100%', overflow: 'hidden' }}>

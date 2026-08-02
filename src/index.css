@@ -247,11 +247,15 @@ html, body, #root {
   animation: floatSoft 4s infinite ease-in-out;
 }
 
-/* Post-Preloader Entrance Reveal Animations */
+/* ==========================================================================
+   LUXURY ANIMATION SYSTEM & SCROLL REVEAL EFFECTS
+   ========================================================================== */
+
+/* Keyframe Animations */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(35px);
   }
   100% {
     opacity: 1;
@@ -259,13 +263,131 @@ html, body, #root {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes luxuryFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(230, 198, 135, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(230, 198, 135, 0.55);
+  }
+}
+
+/* Scroll Reveal CSS Utility Classes */
+.scroll-reveal-box {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal-box.reveal-fade-up {
+  transform: translateY(40px);
+}
+
+.scroll-reveal-box.reveal-scale-up {
+  transform: scale(0.92);
+}
+
+.scroll-reveal-box.reveal-slide-left {
+  transform: translateX(-45px);
+}
+
+.scroll-reveal-box.reveal-slide-right {
+  transform: translateX(45px);
+}
+
+.scroll-reveal-box.reveal-fade-in {
+  transform: translateY(0);
+}
+
+.scroll-reveal-box.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+/* Shimmer Button Effect */
+.shimmer-gold-btn {
+  background: linear-gradient(90deg, #E6C687 0%, #FAF0D9 25%, #E6C687 50%, #C59E4E 75%, #E6C687 100%);
+  background-size: 200% auto;
+  transition: all 0.35s ease;
+}
+
+.shimmer-gold-btn:hover {
+  animation: goldShimmer 2s linear infinite;
+  box-shadow: 0 8px 25px rgba(230, 198, 135, 0.45) !important;
+}
+
+/* Gentle Floating Animation */
+.animate-luxury-float {
+  animation: luxuryFloat 4s ease-in-out infinite;
+}
+
+/* Pulse Glow Animation */
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
 
 /* Badge Styling */
 .badge-gold {
@@ -327,4 +449,5 @@ html, body, #root {
     line-height: 1.55 !important;
   }
 }
+
 

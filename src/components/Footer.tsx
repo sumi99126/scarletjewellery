@@ -1,6 +1,7 @@
 import React from 'react';
 import { useShop } from '../context/ShopContext';
 import { Instagram, MapPin, ShieldCheck, Gem } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 export const Footer: React.FC = () => {
   const { setActiveCategory } = useShop();
@@ -15,6 +16,7 @@ export const Footer: React.FC = () => {
       }}
     >
       <div className="container" style={{ maxWidth: '1360px', margin: '0 auto' }}>
+        <ScrollReveal animation="fade-up">
         {/* Simple & Clean 4-Column Footer Navigation */}
         <div
           style={{
@@ -167,6 +169,7 @@ export const Footer: React.FC = () => {
             <a href="#" style={{ color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'none' }}>Shipping Policy</a>
           </div>
         </div>
+        </ScrollReveal>
       </div>
 
       <style>{`

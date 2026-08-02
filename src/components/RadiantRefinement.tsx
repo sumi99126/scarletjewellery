@@ -1,6 +1,7 @@
 import React from 'react';
 import { useShop } from '../context/ShopContext';
 import { Star, ArrowRight } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 export const RadiantRefinement: React.FC = () => {
   const { setIsBookingOpen } = useShop();
@@ -29,6 +30,7 @@ export const RadiantRefinement: React.FC = () => {
           className="radiant-grid"
         >
           {/* Left Column: Taller Image Card (Narrow Width, Rating Badge, NO Bottom Text) */}
+          <ScrollReveal animation="slide-left" delay={0}>
           <div
             style={{
               position: 'relative',
@@ -82,8 +84,10 @@ export const RadiantRefinement: React.FC = () => {
               className="radiant-img-zoom"
             />
           </div>
+          </ScrollReveal>
 
           {/* Center Column: Clean Heading, Richer Paragraph Text & Simple Pill Button */}
+          <ScrollReveal animation="fade-up" delay={200}>
           <div style={{ padding: '0 1rem' }}>
             <h2
               style={{
@@ -138,8 +142,10 @@ export const RadiantRefinement: React.FC = () => {
               <ArrowRight size={14} />
             </button>
           </div>
+          </ScrollReveal>
 
           {/* Right Column: Shorter Height & Narrower Width Image Card (NO Bottom Text) */}
+          <ScrollReveal animation="slide-right" delay={400}>
           <div
             style={{
               position: 'relative',
@@ -167,6 +173,7 @@ export const RadiantRefinement: React.FC = () => {
               className="radiant-img-zoom"
             />
           </div>
+          </ScrollReveal>
         </div>
       </div>
 

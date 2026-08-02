@@ -1,5 +1,6 @@
 import React from 'react';
 import { RotateCcw, ShieldCheck, Gem, Headphones } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 export const TrustValuesBar: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ export const TrustValuesBar: React.FC = () => {
           className="trust-values-grid"
         >
           {/* Item 1 */}
+          <ScrollReveal animation="fade-up" delay={0}>
           <div
             style={{
               display: 'flex',
@@ -63,8 +65,10 @@ export const TrustValuesBar: React.FC = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Item 2 */}
+          <ScrollReveal animation="fade-up" delay={150}>
           <div
             style={{
               display: 'flex',
@@ -103,8 +107,10 @@ export const TrustValuesBar: React.FC = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Item 3 */}
+          <ScrollReveal animation="fade-up" delay={300}>
           <div
             style={{
               display: 'flex',
@@ -143,8 +149,10 @@ export const TrustValuesBar: React.FC = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Item 4 */}
+          <ScrollReveal animation="fade-up" delay={450}>
           <div
             style={{
               display: 'flex',
@@ -183,6 +191,7 @@ export const TrustValuesBar: React.FC = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
 
