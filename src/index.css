@@ -1,0 +1,330 @@
+/* ==========================================================================
+   SCARLET HAUTE JOAILLERIE - DESIGN SYSTEM & COLOR THEME
+   Option 1: Royal Emerald & Gold (Dark Velvet Obsidian)
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-main: #070A08;
+  --bg-card: #0E1A14;
+  --bg-card-hover: #13241C;
+  --bg-elevated: #162B21;
+  --bg-glass: rgba(14, 26, 20, 0.75);
+  
+  /* Luxury Champagne Gold Palette */
+  --gold-primary: #E6C687;
+  --gold-light: #FAF0D9;
+  --gold-dark: #C59E4E;
+  --gold-muted: #D8B775;
+  --gold-glow: rgba(230, 198, 135, 0.25);
+  --gold-border: rgba(230, 198, 135, 0.35);
+  --gold-gradient: linear-gradient(135deg, #FAF0D9 0%, #E6C687 45%, #C59E4E 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #FFFFFF 0%, #F5DCA3 45%, #D4A853 100%);
+
+  /* Emerald Highlights */
+  --emerald-primary: #0E3A28;
+  --emerald-vivid: #1B5E41;
+  --emerald-glow: rgba(27, 94, 65, 0.4);
+
+  /* Typography Colors */
+  --text-primary: #F8F6F0;
+  --text-secondary: #C8B896;
+  --text-muted: #84938A;
+  --text-inverse: #070A08;
+
+  /* Typography Families */
+  --font-serif: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cinzel', serif;
+
+  /* Spacing & Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
+  --shadow-emerald: 0 10px 35px -10px rgba(14, 58, 40, 0.5);
+  --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.6);
+
+  /* Transition speeds */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #000000;
+  color: var(--text-primary);
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-border-glow {
+  border: 1px solid var(--gold-border);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* Hide Scrollbars Completely Across All Browsers */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+  background: transparent !important;
+}
+
+html, body, #root {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+/* Buttons & Interactive Elements */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background: var(--gold-gradient);
+  color: var(--text-inverse);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  background: var(--gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--text-primary);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-emerald {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background: var(--emerald-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-emerald:hover {
+  background: var(--emerald-vivid);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-emerald);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Gold Metallic Divider */
+.gold-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-primary) 50%, transparent 100%);
+  opacity: 0.4;
+  margin: 2rem 0;
+}
+
+/* Keyframe Animations */
+@keyframes pulseGold {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
+    transform: scale(1.03);
+  }
+}
+
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulseGold 3s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: floatSoft 4s infinite ease-in-out;
+}
+
+/* Post-Preloader Entrance Reveal Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+/* Badge Styling */
+.badge-gold {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+.badge-emerald {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(14, 58, 40, 0.6);
+  border: 1px solid var(--emerald-vivid);
+  color: #8CF5C2;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}
+
+/* Grid Layout Container */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Mobile Spacing & Compact Clean View Overrides */
+@media (max-width: 768px) {
+  section {
+    padding-top: 2.2rem !important;
+    padding-bottom: 2.2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .container {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 6vw, 2.4rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  p {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
