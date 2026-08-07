@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
         backgroundColor: 'rgba(226, 213, 190, 0.98)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        padding: '0.85rem 4.5rem',
+        padding: '0.45rem 4rem',
         borderBottom: '1px solid rgba(163, 131, 73, 0.35)',
         position: 'sticky',
         top: 0,
@@ -75,15 +75,15 @@ export const Navbar: React.FC = () => {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Center/Left: Brand Logo (76px Height) */}
+        {/* Center/Left: Brand Logo (Sleek Compact 52px Height) */}
         <a href="#" onClick={handleGoHome} style={{ display: 'flex', alignItems: 'center' }} className="navbar-logo-link">
           <img
             src="/img/scarletlogo.png"
             alt="Scarlet Jewelry Logo"
             style={{
-              height: '76px',
+              height: '52px',
               width: 'auto',
-              maxHeight: '76px',
+              maxHeight: '52px',
               objectFit: 'contain',
             }}
             className="navbar-logo-img"
