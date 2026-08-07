@@ -187,25 +187,27 @@ export const InstagramGallery: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '0.6rem',
+                gap: '0.5rem',
                 background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
                 color: '#FFFFFF',
-                padding: '0.85rem 1.8rem',
+                padding: '0.85rem 1.2rem',
                 borderRadius: '999px',
-                fontSize: '0.82rem',
+                fontSize: 'clamp(0.72rem, 2.9vw, 0.82rem)',
                 fontWeight: 700,
-                letterSpacing: '0.08em',
+                letterSpacing: '0.04em',
                 textTransform: 'uppercase',
                 textDecoration: 'none',
                 boxShadow: '0 6px 20px rgba(15, 62, 54, 0.25)',
                 border: '1px solid #A38349',
                 transition: 'all 0.35s ease',
+                whiteSpace: 'nowrap',
+                width: '100%',
               }}
               className="follow-profile-btn"
             >
-              <Instagram size={17} />
-              <span>FOLLOW @SHOP.SCARLETPK</span>
-              <ArrowRight size={15} />
+              <Instagram size={16} style={{ flexShrink: 0 }} />
+              <span style={{ whiteSpace: 'nowrap' }}>FOLLOW @SHOP.SCARLETPK</span>
+              <ArrowRight size={14} style={{ flexShrink: 0 }} />
             </a>
           </div>
           </ScrollReveal>
@@ -332,6 +334,12 @@ export const InstagramGallery: React.FC = () => {
         .tilted-polaroid-card:hover .polaroid-img {
           transform: scale(1.08);
         }
+        .follow-profile-btn {
+          white-space: nowrap !important;
+        }
+        .follow-profile-btn span {
+          white-space: nowrap !important;
+        }
         .follow-profile-btn:hover {
           transform: translateY(-2px);
           box-shadow: 0 10px 30px rgba(15, 62, 54, 0.3) !important;
@@ -348,6 +356,11 @@ export const InstagramGallery: React.FC = () => {
           }
           .tilted-polaroid-card {
             transform: none !important;
+          }
+          .follow-profile-btn {
+            padding: 0.75rem 0.85rem !important;
+            font-size: 0.72rem !important;
+            gap: 0.35rem !important;
           }
         }
       `}</style>

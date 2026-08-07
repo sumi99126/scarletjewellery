@@ -23,8 +23,7 @@ export const Wishlist: React.FC = () => {
         position: 'fixed',
         inset: 0,
         zIndex: 2250,
-        backgroundColor: 'rgba(15, 62, 54, 0.5)',
-        backdropFilter: 'blur(8px)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
         display: 'flex',
         justifyContent: 'flex-end',
       }}

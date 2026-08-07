@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Center/Left: Brand Logo (Slightly Bigger Size: 76px) */}
+        {/* Center/Left: Brand Logo (76px Height) */}
         <a href="#" onClick={handleGoHome} style={{ display: 'flex', alignItems: 'center' }} className="navbar-logo-link">
           <img
             src="/img/scarletlogo.png"
@@ -291,37 +291,46 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Left Slide-In Animated Navigation Panel & Backdrop */}
+      {/* Mobile Fullscreen Slide-In Drawer with Solid Light Cream Background */}
       {mobileMenuOpen && (
         <div
           style={{
             position: 'fixed',
-            inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.65)',
-            backdropFilter: 'blur(6px)',
-            zIndex: 2500,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: '100vw',
+            height: '100vh',
+            minHeight: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            zIndex: 99999,
             display: 'flex',
           }}
           onClick={() => setMobileMenuOpen(false)}
         >
-          {/* Animated Left Slide-In Drawer Panel */}
+          {/* Animated Left Slide-In Drawer Panel with 100% Solid Opaque Light Cream Background */}
           <div
             style={{
-              width: '290px',
+              width: '300px',
               maxWidth: '85vw',
-              height: '100%',
-              backgroundColor: '#E2D5BE',
+              height: '100vh',
+              minHeight: '100vh',
+              backgroundColor: '#FAF5EE',
               borderRight: '1px solid rgba(163, 131, 73, 0.4)',
               padding: '2rem 1.6rem',
               display: 'flex',
               flexDirection: 'column',
-              boxShadow: '10px 0 30px rgba(0, 0, 0, 0.2)',
-              animation: 'slideInLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              boxShadow: '10px 0 35px rgba(0, 0, 0, 0.4)',
+              animation: 'slideInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              position: 'relative',
+              zIndex: 100000,
+              overflowY: 'auto',
             }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Drawer Header */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem', borderBottom: '1px solid rgba(163, 131, 73, 0.3)', paddingBottom: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem', borderBottom: '1px solid rgba(163, 131, 73, 0.25)', paddingBottom: '1rem' }}>
               <img
                 src="/img/scarletlogo.png"
                 alt="Scarlet Logo"
@@ -330,12 +339,12 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
-                  background: 'rgba(0, 0, 0, 0.1)',
-                  border: 'none',
-                  color: '#000000',
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(163, 131, 73, 0.25)',
+                  color: '#0F3E36',
                   borderRadius: '50%',
-                  width: '32px',
-                  height: '32px',
+                  width: '34px',
+                  height: '34px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -353,7 +362,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: currentPage === 'home' ? '#816430' : '#000000',
+                  color: currentPage === 'home' ? '#A38349' : '#0F3E36',
                   fontSize: '1.05rem',
                   fontWeight: 700,
                   textAlign: 'left',
@@ -364,7 +373,7 @@ export const Navbar: React.FC = () => {
                 }}
               >
                 <span>Home</span>
-                {currentPage === 'home' && <span style={{ color: '#816430', fontSize: '0.8rem' }}>●</span>}
+                {currentPage === 'home' && <span style={{ color: '#A38349', fontSize: '0.8rem' }}>●</span>}
               </button>
 
               <button
@@ -372,7 +381,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: currentPage === 'shop' && activeCategory === 'all' ? '#816430' : '#000000',
+                  color: currentPage === 'shop' && activeCategory === 'all' ? '#A38349' : '#0F3E36',
                   fontSize: '1.05rem',
                   fontWeight: 700,
                   textAlign: 'left',
@@ -383,12 +392,12 @@ export const Navbar: React.FC = () => {
                 }}
               >
                 <span>All Products (Shop)</span>
-                {currentPage === 'shop' && activeCategory === 'all' && <span style={{ color: '#816430', fontSize: '0.8rem' }}>●</span>}
+                {currentPage === 'shop' && activeCategory === 'all' && <span style={{ color: '#A38349', fontSize: '0.8rem' }}>●</span>}
               </button>
 
-              <div style={{ height: '1px', backgroundColor: 'rgba(163, 131, 73, 0.3)', margin: '0.4rem 0' }} />
+              <div style={{ height: '1px', backgroundColor: 'rgba(163, 131, 73, 0.25)', margin: '0.4rem 0' }} />
 
-              <span style={{ color: '#816430', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+              <span style={{ color: '#A38349', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                 CATEGORIES
               </span>
 
@@ -397,7 +406,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'rings' ? '#816430' : '#000000',
+                  color: activeCategory === 'rings' ? '#A38349' : '#0F3E36',
                   fontSize: '0.96rem',
                   fontWeight: 600,
                   textAlign: 'left',
@@ -413,7 +422,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'earrings' ? '#816430' : '#000000',
+                  color: activeCategory === 'earrings' ? '#A38349' : '#0F3E36',
                   fontSize: '0.96rem',
                   fontWeight: 600,
                   textAlign: 'left',
@@ -429,7 +438,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'bracelets' ? '#816430' : '#000000',
+                  color: activeCategory === 'bracelets' ? '#A38349' : '#0F3E36',
                   fontSize: '0.96rem',
                   fontWeight: 600,
                   textAlign: 'left',
@@ -445,7 +454,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'necklaces' ? '#816430' : '#000000',
+                  color: activeCategory === 'necklaces' ? '#A38349' : '#0F3E36',
                   fontSize: '0.96rem',
                   fontWeight: 600,
                   textAlign: 'left',
@@ -461,7 +470,7 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'watches' ? '#816430' : '#000000',
+                  color: activeCategory === 'watches' ? '#A38349' : '#0F3E36',
                   fontSize: '0.96rem',
                   fontWeight: 600,
                   textAlign: 'left',

@@ -418,9 +418,10 @@ export const ShopPage: React.FC = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             gap: '0.35rem',
+                            boxShadow: '0 4px 12px rgba(15, 62, 54, 0.2)',
                             transition: 'all 0.3s ease',
                           }}
-                          className="shop-add-btn"
+                          className="shop-add-cart-btn"
                         >
                           <ShoppingBag size={13} />
                           <span>Add to Bag</span>
@@ -436,14 +437,13 @@ export const ShopPage: React.FC = () => {
       </div>
 
       <style>{`
-        .sidebar-category-btn:hover {
+        .shop-filter-btn:hover {
           color: #A38349 !important;
-          background: rgba(163, 131, 73, 0.08) !important;
         }
         .shop-card:hover {
-          transform: translateY(-6px);
+          transform: translateY(-4px);
           border-color: #A38349 !important;
-          box-shadow: 0 15px 35px rgba(15, 62, 54, 0.12) !important;
+          box-shadow: 0 16px 35px rgba(15, 62, 54, 0.1) !important;
         }
         .shop-card:hover .shop-img {
           transform: scale(1.06);
@@ -478,10 +478,27 @@ export const ShopPage: React.FC = () => {
             gap: 1rem !important;
           }
         }
+        @media (max-width: 640px) {
+          .shop-add-cart-btn {
+            padding: 0.42rem 0.5rem !important;
+            font-size: 0.68rem !important;
+            height: 34px !important;
+            letter-spacing: 0.03em !important;
+            gap: 0.25rem !important;
+          }
+          .shop-add-cart-btn svg {
+            width: 12px !important;
+            height: 12px !important;
+          }
+        }
         @media (max-width: 500px) {
           .shop-main-grid {
             grid-template-columns: repeat(2, 1fr) !important;
-            gap: 0.75rem !important;
+            gap: 0.65rem !important;
+          }
+          .shop-img-box {
+            height: 180px !important;
+            padding: 0.85rem !important;
           }
         }
       `}</style>

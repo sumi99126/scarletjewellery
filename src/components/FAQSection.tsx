@@ -59,7 +59,7 @@ export const FAQSection: React.FC = () => {
             style={{
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
               fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-              fontWeight: 400,
+              fontWeight: 700,
               color: '#0F3E36',
               lineHeight: 1.15,
             }}
@@ -100,13 +100,13 @@ export const FAQSection: React.FC = () => {
                     color: '#0F3E36',
                     textAlign: 'left',
                     cursor: 'pointer',
-                    fontSize: '0.94rem',
+                    fontSize: '0.96rem',
                     fontFamily: 'var(--font-sans)',
-                    fontWeight: 600,
+                    fontWeight: 700,
                   }}
                   className="faq-minimal-btn"
                 >
-                  <span style={{ color: isOpen ? '#A38349' : '#0F3E36', transition: 'color 0.2s ease' }}>
+                  <span style={{ color: isOpen ? '#A38349' : '#0F3E36', fontWeight: 700, transition: 'color 0.2s ease' }}>
                     {faq.question}
                   </span>
                   <div

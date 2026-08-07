@@ -36,7 +36,7 @@ export const ProductModal: React.FC = () => {
       }}
       onClick={() => setQuickViewProduct(null)}
     >
-      {/* Simple Clean Product Modal Box */}
+      {/* Simple Clean Product Modal Box with Light Cream Background */}
       <div
         style={{
           width: '100%',
@@ -45,11 +45,12 @@ export const ProductModal: React.FC = () => {
           overflowY: 'auto',
           position: 'relative',
           padding: '2rem',
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#FAF5EE',
           border: '1px solid rgba(163, 131, 73, 0.35)',
           borderRadius: '20px',
-          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.15)',
+          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.2)',
         }}
+        className="modal-box-card"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -59,8 +60,8 @@ export const ProductModal: React.FC = () => {
             position: 'absolute',
             top: '1.2rem',
             right: '1.2rem',
-            background: '#FAF5EE',
-            border: 'none',
+            background: '#FFFFFF',
+            border: '1px solid rgba(163, 131, 73, 0.25)',
             color: '#0F3E36',
             width: '34px',
             height: '34px',
@@ -102,6 +103,7 @@ export const ProductModal: React.FC = () => {
                 padding: '1.5rem',
                 border: '1px solid rgba(163, 131, 73, 0.25)',
               }}
+              className="modal-img-container"
             >
               <img
                 src={currentImage}
@@ -159,7 +161,7 @@ export const ProductModal: React.FC = () => {
                 fontSize: '1.8rem',
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 color: '#0F3E36',
-                fontWeight: 600,
+                fontWeight: 700,
                 marginBottom: '0.4rem',
                 lineHeight: 1.2,
               }}
@@ -191,7 +193,7 @@ export const ProductModal: React.FC = () => {
             {/* Simple Specifications List */}
             <div
               style={{
-                backgroundColor: '#FAF5EE',
+                backgroundColor: '#FFFFFF',
                 border: '1px solid rgba(163, 131, 73, 0.25)',
                 borderRadius: '12px',
                 padding: '0.85rem 1rem',
@@ -201,6 +203,7 @@ export const ProductModal: React.FC = () => {
                 gridTemplateColumns: '1fr 1fr',
                 gap: '0.5rem',
               }}
+              className="modal-specs-box"
             >
               <div>
                 <span style={{ color: '#72847C' }}>Metal:</span>{' '}
@@ -214,33 +217,44 @@ export const ProductModal: React.FC = () => {
               )}
             </div>
 
-            {/* Simple Action Buttons */}
-            <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+            {/* Proportionate Action Buttons for Desktop and Mobile */}
+            <div
+              style={{
+                display: 'flex',
+                gap: '0.6rem',
+                alignItems: 'center',
+                flexWrap: 'nowrap',
+              }}
+              className="modal-actions-row"
+            >
               <button
                 onClick={() => {
                   addToCart(quickViewProduct);
                   setQuickViewProduct(null);
                 }}
                 style={{
-                  flex: '1 1 45%',
+                  flex: '1 1 50%',
                   background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
                   color: '#FFFFFF',
                   border: '1px solid #A38349',
-                  padding: '0.8rem 1.2rem',
+                  padding: '0.65rem 1rem',
                   borderRadius: '999px',
-                  fontSize: '0.8rem',
+                  fontSize: '0.78rem',
                   fontWeight: 700,
-                  letterSpacing: '0.08em',
+                  letterSpacing: '0.06em',
                   textTransform: 'uppercase',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '0.4rem',
-                  boxShadow: '0 4px 15px rgba(15, 62, 54, 0.2)',
+                  boxShadow: '0 4px 12px rgba(15, 62, 54, 0.18)',
+                  height: '42px',
+                  whiteSpace: 'nowrap',
                 }}
+                className="modal-order-btn"
               >
-                <ShoppingBag size={15} />
+                <ShoppingBag size={14} style={{ flexShrink: 0 }} />
                 <span>ORDER NOW</span>
               </button>
 
@@ -249,20 +263,23 @@ export const ProductModal: React.FC = () => {
                   addToCart(quickViewProduct);
                 }}
                 style={{
-                  flex: '1 1 40%',
+                  flex: '1 1 38%',
                   backgroundColor: '#FAF5EE',
                   color: '#0F3E36',
                   border: '1px solid #A38349',
-                  padding: '0.8rem 1rem',
+                  padding: '0.65rem 0.85rem',
                   borderRadius: '999px',
-                  fontSize: '0.78rem',
+                  fontSize: '0.75rem',
                   fontWeight: 600,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '0.4rem',
+                  gap: '0.35rem',
+                  height: '42px',
+                  whiteSpace: 'nowrap',
                 }}
+                className="modal-add-btn"
               >
                 <span>Add to Bag</span>
               </button>
@@ -273,8 +290,8 @@ export const ProductModal: React.FC = () => {
                   backgroundColor: '#FAF5EE',
                   border: '1px solid rgba(163, 131, 73, 0.3)',
                   borderRadius: '50%',
-                  width: '44px',
-                  height: '44px',
+                  width: '42px',
+                  height: '42px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -283,9 +300,10 @@ export const ProductModal: React.FC = () => {
                   flexShrink: 0,
                   transition: 'transform 0.2s ease',
                 }}
+                className="modal-wish-btn"
                 title={isSaved ? 'Remove from Wishlist' : 'Add to Wishlist'}
               >
-                <Heart size={18} fill={isSaved ? '#C81E1E' : 'none'} />
+                <Heart size={16} fill={isSaved ? '#C81E1E' : 'none'} />
               </button>
             </div>
           </div>
@@ -294,8 +312,39 @@ export const ProductModal: React.FC = () => {
 
       <style>{`
         @media (max-width: 768px) {
+          .modal-box-card {
+            padding: 1.25rem !important;
+            border-radius: 16px !important;
+          }
           .modal-grid-box {
             grid-template-columns: 1fr !important;
+            gap: 1.2rem !important;
+          }
+          .modal-img-container {
+            height: 220px !important;
+            padding: 1rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          .modal-specs-box {
+            padding: 0.65rem 0.85rem !important;
+            margin-bottom: 1.1rem !important;
+          }
+          .modal-actions-row {
+            gap: 0.4rem !important;
+          }
+          .modal-order-btn {
+            height: 38px !important;
+            padding: 0.5rem 0.75rem !important;
+            font-size: 0.72rem !important;
+          }
+          .modal-add-btn {
+            height: 38px !important;
+            padding: 0.5rem 0.65rem !important;
+            font-size: 0.72rem !important;
+          }
+          .modal-wish-btn {
+            width: 38px !important;
+            height: 38px !important;
           }
         }
       `}</style>
