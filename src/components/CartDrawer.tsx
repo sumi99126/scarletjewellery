@@ -61,11 +61,11 @@ export const CartDrawer: React.FC = () => {
           width: '100%',
           maxWidth: '460px',
           height: '100%',
-          backgroundColor: '#000000',
-          borderLeft: '1px solid rgba(230, 198, 135, 0.3)',
+          backgroundColor: '#FFFFFF',
+          borderLeft: '1px solid rgba(163, 131, 73, 0.3)',
           display: 'flex',
           flexDirection: 'column',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.9)',
+          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.2)',
           position: 'relative',
         }}
         onClick={(e) => e.stopPropagation()}
@@ -74,17 +74,17 @@ export const CartDrawer: React.FC = () => {
         <div
           style={{
             padding: '1.4rem 1.5rem',
-            borderBottom: '1px solid rgba(230, 198, 135, 0.2)',
+            borderBottom: '1px solid rgba(163, 131, 73, 0.25)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: '#000000',
+            backgroundColor: '#FAF5EE',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <ShoppingBag size={20} style={{ color: '#E6C687' }} />
-            <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-sans)', fontWeight: 600, color: '#FFFFFF' }}>Your Shopping Bag</h3>
-            <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.5)' }}>({cart.length})</span>
+            <ShoppingBag size={20} style={{ color: '#A38349' }} />
+            <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-sans)', fontWeight: 600, color: '#0F3E36' }}>Your Shopping Bag</h3>
+            <span style={{ fontSize: '0.8rem', color: '#72847C' }}>({cart.length})</span>
           </div>
 
           <button
@@ -266,7 +266,7 @@ export const CartDrawer: React.FC = () => {
             style={{
               padding: '1.5rem',
               borderTop: '1px solid var(--gold-border)',
-              backgroundColor: '#070A08',
+              backgroundColor: '#FAF5EE',
             }}
           >
             {/* VIP Promo Form */}

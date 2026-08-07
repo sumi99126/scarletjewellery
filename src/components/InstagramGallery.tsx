@@ -48,30 +48,18 @@ export const InstagramGallery: React.FC = () => {
     <section
       id="instagram-gallery-section"
       style={{
-        backgroundColor: '#000000',
-        padding: '4rem 1.5rem 4rem 1.5rem',
+        backgroundColor: '#FAF3E8',
+        borderTop: '1px solid rgba(163, 131, 73, 0.25)',
+        borderBottom: '1px solid rgba(163, 131, 73, 0.25)',
+        padding: '4.5rem 1.5rem 4.5rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
         maxWidth: '100vw',
         width: '100%',
       }}
     >
-      {/* Background Ambient Gold Radial Glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '600px',
-          height: '600px',
-          background: 'radial-gradient(circle, rgba(230, 198, 135, 0.08) 0%, rgba(0, 0, 0, 0) 70%)',
-          pointerEvents: 'none',
-        }}
-      />
-
       <div className="container" style={{ maxWidth: '1360px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        {/* 2-Column Creative Layout: Left Instagram Profile Card + Right Tilted Polaroid Feed */}
+        {/* 2-Column Creative Layout: Left Instagram Profile Card + Right Tilted Feed */}
         <div
           style={{
             display: 'grid',
@@ -85,11 +73,11 @@ export const InstagramGallery: React.FC = () => {
           <ScrollReveal animation="slide-left" delay={0}>
           <div
             style={{
-              backgroundColor: '#070A08',
-              border: '1px solid rgba(230, 198, 135, 0.35)',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.35)',
               borderRadius: '28px',
               padding: '2rem',
-              boxShadow: '0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(230, 198, 135, 0.12)',
+              boxShadow: '0 15px 40px rgba(15, 62, 54, 0.08)',
               position: 'relative',
             }}
             className="insta-profile-card"
@@ -117,19 +105,19 @@ export const InstagramGallery: React.FC = () => {
                       height: '100%',
                       borderRadius: '50%',
                       objectFit: 'cover',
-                      border: '2px solid #070A08',
+                      border: '2px solid #FFFFFF',
                     }}
                   />
                 </div>
 
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                    <span style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 700, fontFamily: 'var(--font-sans)' }}>
+                    <span style={{ color: '#0F3E36', fontSize: '1.1rem', fontWeight: 700, fontFamily: 'var(--font-sans)' }}>
                       shop.scarletpk
                     </span>
-                    <CheckCircle size={16} style={{ color: '#E6C687', fill: '#E6C687' }} />
+                    <CheckCircle size={16} style={{ color: '#A38349', fill: '#A38349' }} />
                   </div>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.55)', fontSize: '0.78rem' }}>
+                  <span style={{ color: '#5A6B63', fontSize: '0.78rem' }}>
                     Fine Jewelry & Luxury Watches
                   </span>
                 </div>
@@ -143,12 +131,12 @@ export const InstagramGallery: React.FC = () => {
                   width: '38px',
                   height: '38px',
                   borderRadius: '50%',
-                  backgroundColor: 'rgba(230, 198, 135, 0.15)',
-                  border: '1px solid rgba(230, 198, 135, 0.3)',
+                  backgroundColor: 'rgba(163, 131, 73, 0.15)',
+                  border: '1px solid rgba(163, 131, 73, 0.3)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#E6C687',
+                  color: '#A38349',
                   transition: 'all 0.2s ease',
                 }}
                 className="insta-icon-link"
@@ -158,7 +146,7 @@ export const InstagramGallery: React.FC = () => {
             </div>
 
             {/* Profile Bio & Stats */}
-            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.88rem', lineHeight: 1.5, marginBottom: '1.4rem' }}>
+            <p style={{ color: '#455850', fontSize: '0.88rem', lineHeight: 1.5, marginBottom: '1.4rem' }}>
               ✨ Crafting timeless 18K solid gold & bespoke diamond timepieces. Worldwide shipping from Pakistan.
             </p>
 
@@ -167,26 +155,26 @@ export const InstagramGallery: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-around',
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                backgroundColor: 'rgba(163, 131, 73, 0.08)',
                 borderRadius: '16px',
                 padding: '0.85rem',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(163, 131, 73, 0.18)',
                 marginBottom: '1.8rem',
               }}
             >
               <div style={{ textAlign: 'center' }}>
-                <span style={{ display: 'block', color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 700 }}>482</span>
-                <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.7rem', textTransform: 'uppercase' }}>Posts</span>
+                <span style={{ display: 'block', color: '#0F3E36', fontSize: '1.05rem', fontWeight: 700 }}>482</span>
+                <span style={{ color: '#72847C', fontSize: '0.7rem', textTransform: 'uppercase' }}>Posts</span>
               </div>
-              <div style={{ width: '1px', height: '24px', backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+              <div style={{ width: '1px', height: '24px', backgroundColor: 'rgba(163, 131, 73, 0.2)' }} />
               <div style={{ textAlign: 'center' }}>
-                <span style={{ display: 'block', color: '#E6C687', fontSize: '1.05rem', fontWeight: 700 }}>24.8K</span>
-                <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.7rem', textTransform: 'uppercase' }}>Followers</span>
+                <span style={{ display: 'block', color: '#A38349', fontSize: '1.05rem', fontWeight: 700 }}>24.8K</span>
+                <span style={{ color: '#72847C', fontSize: '0.7rem', textTransform: 'uppercase' }}>Followers</span>
               </div>
-              <div style={{ width: '1px', height: '24px', backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+              <div style={{ width: '1px', height: '24px', backgroundColor: 'rgba(163, 131, 73, 0.2)' }} />
               <div style={{ textAlign: 'center' }}>
-                <span style={{ display: 'block', color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 700 }}>100%</span>
-                <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '0.7rem', textTransform: 'uppercase' }}>Authentic</span>
+                <span style={{ display: 'block', color: '#0F3E36', fontSize: '1.05rem', fontWeight: 700 }}>100%</span>
+                <span style={{ color: '#72847C', fontSize: '0.7rem', textTransform: 'uppercase' }}>Authentic</span>
               </div>
             </div>
 
@@ -200,8 +188,8 @@ export const InstagramGallery: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '0.6rem',
-                background: 'linear-gradient(135deg, #FAF0D9 0%, #E6C687 50%, #C59E4E 100%)',
-                color: '#070A08',
+                background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
+                color: '#FFFFFF',
                 padding: '0.85rem 1.8rem',
                 borderRadius: '999px',
                 fontSize: '0.82rem',
@@ -209,7 +197,8 @@ export const InstagramGallery: React.FC = () => {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 textDecoration: 'none',
-                boxShadow: '0 6px 20px rgba(230, 198, 135, 0.35)',
+                boxShadow: '0 6px 20px rgba(15, 62, 54, 0.25)',
+                border: '1px solid #A38349',
                 transition: 'all 0.35s ease',
               }}
               className="follow-profile-btn"
@@ -225,7 +214,7 @@ export const InstagramGallery: React.FC = () => {
           <ScrollReveal animation="slide-right" delay={200}>
           <div>
             <div style={{ marginBottom: '1.8rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#E6C687', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#A38349', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
                 <Sparkles size={14} />
                 <span>COMMUNITY & ATELIER JOURNAL</span>
               </div>
@@ -234,7 +223,7 @@ export const InstagramGallery: React.FC = () => {
                   fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
                   fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
                   fontWeight: 400,
-                  color: '#FFFFFF',
+                  color: '#0F3E36',
                   lineHeight: 1.18,
                 }}
               >
@@ -259,13 +248,13 @@ export const InstagramGallery: React.FC = () => {
                   rel="noopener noreferrer"
                   style={{
                     position: 'relative',
-                    backgroundColor: '#0A0A0A',
-                    border: '1px solid rgba(230, 198, 135, 0.25)',
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid rgba(163, 131, 73, 0.25)',
                     borderRadius: '20px',
                     overflow: 'hidden',
                     display: 'block',
                     textDecoration: 'none',
-                    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.8)',
+                    boxShadow: '0 10px 30px rgba(15, 62, 54, 0.07)',
                     transform: `rotate(${post.rotation})`,
                     transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}
@@ -291,12 +280,12 @@ export const InstagramGallery: React.FC = () => {
                         position: 'absolute',
                         top: '0.75rem',
                         left: '0.75rem',
-                        backgroundColor: 'rgba(7, 10, 8, 0.8)',
+                        backgroundColor: 'rgba(250, 243, 232, 0.95)',
                         backdropFilter: 'blur(6px)',
-                        border: '1px solid rgba(230, 198, 135, 0.3)',
+                        border: '1px solid rgba(163, 131, 73, 0.4)',
                         borderRadius: '999px',
                         padding: '0.25rem 0.65rem',
-                        color: '#FAF0D9',
+                        color: '#0F3E36',
                         fontSize: '0.65rem',
                         fontWeight: 600,
                       }}
@@ -309,19 +298,19 @@ export const InstagramGallery: React.FC = () => {
                   <div style={{ padding: '0.85rem 1rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#E6C687', fontSize: '0.75rem', fontWeight: 600 }}>
-                          <Heart size={14} fill="#E6C687" />
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#A38349', fontSize: '0.75rem', fontWeight: 600 }}>
+                          <Heart size={14} fill="#A38349" />
                           <span>{post.likes}</span>
                         </span>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.75rem' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#72847C', fontSize: '0.75rem' }}>
                           <MessageCircle size={14} />
                           <span>{post.comments}</span>
                         </span>
                       </div>
-                      <ExternalLink size={13} style={{ color: 'rgba(255, 255, 255, 0.4)' }} />
+                      <ExternalLink size={13} style={{ color: '#A38349' }} />
                     </div>
 
-                    <p style={{ color: 'rgba(255, 255, 255, 0.72)', fontSize: '0.75rem', lineHeight: 1.35, margin: 0 }}>
+                    <p style={{ color: '#455850', fontSize: '0.75rem', lineHeight: 1.35, margin: 0 }}>
                       {post.caption}
                     </p>
                   </div>
@@ -336,8 +325,8 @@ export const InstagramGallery: React.FC = () => {
       <style>{`
         .tilted-polaroid-card:hover {
           transform: rotate(0deg) translateY(-8px) scale(1.03) !important;
-          border-color: rgba(230, 198, 135, 0.65) !important;
-          box-shadow: 0 25px 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(230, 198, 135, 0.2) !important;
+          border-color: #A38349 !important;
+          box-shadow: 0 20px 40px rgba(15, 62, 54, 0.15) !important;
           z-index: 10;
         }
         .tilted-polaroid-card:hover .polaroid-img {
@@ -345,7 +334,7 @@ export const InstagramGallery: React.FC = () => {
         }
         .follow-profile-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 10px 30px rgba(230, 198, 135, 0.5) !important;
+          box-shadow: 0 10px 30px rgba(15, 62, 54, 0.3) !important;
         }
         @media (max-width: 1024px) {
           .insta-social-grid {

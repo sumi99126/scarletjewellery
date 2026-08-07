@@ -38,7 +38,7 @@ export const FAQSection: React.FC = () => {
     <section
       id="faq-section"
       style={{
-        backgroundColor: '#000000',
+        backgroundColor: '#F5EEE4',
         padding: '4rem 1.5rem 4rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
@@ -50,7 +50,7 @@ export const FAQSection: React.FC = () => {
         {/* Section Header */}
         <ScrollReveal animation="fade-up">
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#E6C687', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#A38349', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
             <HelpCircle size={14} />
             <span>FAQS</span>
           </div>
@@ -60,7 +60,7 @@ export const FAQSection: React.FC = () => {
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
               fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
               fontWeight: 400,
-              color: '#FFFFFF',
+              color: '#0F3E36',
               lineHeight: 1.15,
             }}
           >
@@ -69,7 +69,7 @@ export const FAQSection: React.FC = () => {
         </div>
         </ScrollReveal>
 
-        {/* Minimal Accordion List (5 Items for Artificial Jewelry) */}
+        {/* Minimal Accordion List */}
         <ScrollReveal animation="fade-up" delay={150}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
           {faqs.map((faq, index) => {
@@ -78,10 +78,11 @@ export const FAQSection: React.FC = () => {
               <div
                 key={index}
                 style={{
-                  backgroundColor: '#070A08',
-                  border: isOpen ? '1px solid rgba(230, 198, 135, 0.45)' : '1px solid rgba(230, 198, 135, 0.18)',
+                  backgroundColor: '#FFFFFF',
+                  border: isOpen ? '1px solid #A38349' : '1px solid rgba(163, 131, 73, 0.25)',
                   borderRadius: '14px',
                   overflow: 'hidden',
+                  boxShadow: isOpen ? '0 10px 25px rgba(15, 62, 54, 0.08)' : '0 4px 15px rgba(15, 62, 54, 0.03)',
                   transition: 'all 0.3s ease',
                 }}
               >
@@ -96,7 +97,7 @@ export const FAQSection: React.FC = () => {
                     padding: '1.1rem 1.4rem',
                     background: 'transparent',
                     border: 'none',
-                    color: '#FFFFFF',
+                    color: '#0F3E36',
                     textAlign: 'left',
                     cursor: 'pointer',
                     fontSize: '0.94rem',
@@ -105,7 +106,7 @@ export const FAQSection: React.FC = () => {
                   }}
                   className="faq-minimal-btn"
                 >
-                  <span style={{ color: isOpen ? '#FAF0D9' : '#FFFFFF', transition: 'color 0.2s ease' }}>
+                  <span style={{ color: isOpen ? '#A38349' : '#0F3E36', transition: 'color 0.2s ease' }}>
                     {faq.question}
                   </span>
                   <div
@@ -113,11 +114,11 @@ export const FAQSection: React.FC = () => {
                       width: '28px',
                       height: '28px',
                       borderRadius: '50%',
-                      backgroundColor: isOpen ? 'rgba(230, 198, 135, 0.2)' : 'rgba(255, 255, 255, 0.05)',
+                      backgroundColor: isOpen ? 'rgba(163, 131, 73, 0.15)' : 'rgba(15, 62, 54, 0.05)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      color: isOpen ? '#E6C687' : 'rgba(255, 255, 255, 0.5)',
+                      color: isOpen ? '#A38349' : '#0F3E36',
                       flexShrink: 0,
                     }}
                   >
@@ -129,11 +130,11 @@ export const FAQSection: React.FC = () => {
                   <div
                     style={{
                       padding: '0 1.4rem 1.2rem 1.4rem',
-                      color: 'rgba(255, 255, 255, 0.7)',
+                      color: '#455850',
                       fontSize: '0.88rem',
                       lineHeight: 1.6,
                       fontFamily: 'var(--font-sans)',
-                      borderTop: '1px dashed rgba(230, 198, 135, 0.15)',
+                      borderTop: '1px dashed rgba(163, 131, 73, 0.2)',
                       paddingTop: '0.85rem',
                     }}
                   >
@@ -148,14 +149,14 @@ export const FAQSection: React.FC = () => {
 
         {/* Minimal Sub-Link */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <span style={{ color: 'rgba(255, 255, 255, 0.55)', fontSize: '0.82rem' }}>
+          <span style={{ color: '#5A6B63', fontSize: '0.82rem' }}>
             Have any other questions?{' '}
             <button
               onClick={() => setIsBookingOpen(true)}
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#E6C687',
+                color: '#A38349',
                 fontWeight: 600,
                 textDecoration: 'underline',
                 cursor: 'pointer',
@@ -170,7 +171,7 @@ export const FAQSection: React.FC = () => {
 
       <style>{`
         .faq-minimal-btn:hover span {
-          color: #E6C687 !important;
+          color: #A38349 !important;
         }
       `}</style>
     </section>

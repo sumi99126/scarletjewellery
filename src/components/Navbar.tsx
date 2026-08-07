@@ -36,12 +36,15 @@ export const Navbar: React.FC = () => {
   return (
     <header
       style={{
-        backgroundColor: '#000000',
-        padding: '1.25rem 4.5rem',
-        borderBottom: 'none',
+        backgroundColor: 'rgba(226, 213, 190, 0.98)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        padding: '0.85rem 4.5rem',
+        borderBottom: '1px solid rgba(163, 131, 73, 0.35)',
         position: 'sticky',
         top: 0,
         zIndex: 1000,
+        boxShadow: '0 4px 20px rgba(15, 62, 54, 0.08)',
       }}
       className="site-navbar"
     >
@@ -61,7 +64,7 @@ export const Navbar: React.FC = () => {
           style={{
             background: 'transparent',
             border: 'none',
-            color: '#FFFFFF',
+            color: '#000000',
             cursor: 'pointer',
             padding: '0.2rem',
             display: 'none',
@@ -72,22 +75,22 @@ export const Navbar: React.FC = () => {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Center/Left: Brand Logo */}
+        {/* Center/Left: Brand Logo (Slightly Bigger Size: 76px) */}
         <a href="#" onClick={handleGoHome} style={{ display: 'flex', alignItems: 'center' }} className="navbar-logo-link">
           <img
-            src="/img/logo3.png"
+            src="/img/scarletlogo.png"
             alt="Scarlet Jewelry Logo"
             style={{
-              height: '62px',
+              height: '76px',
               width: 'auto',
-              maxHeight: '62px',
+              maxHeight: '76px',
               objectFit: 'contain',
             }}
             className="navbar-logo-img"
           />
         </a>
 
-        {/* Center: Desktop Navigation Links */}
+        {/* Center: Desktop Navigation Links (Bold Black Menu Text) */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }} className="desktop-nav-menu">
           <button
             onClick={handleGoHome}
@@ -95,12 +98,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'home' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'home' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 600,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Home
@@ -112,12 +115,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'all' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'all' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 600,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Shop
@@ -129,12 +132,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'rings' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'rings' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 400,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Rings
@@ -146,12 +149,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'earrings' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'earrings' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 400,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Earrings
@@ -163,12 +166,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'bracelets' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'bracelets' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 400,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Bracelets
@@ -180,12 +183,12 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'necklaces' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'necklaces' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 400,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Necklaces
@@ -197,42 +200,42 @@ export const Navbar: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: currentPage === 'shop' && activeCategory === 'watches' ? '#E6C687' : '#FFFFFF',
+              color: currentPage === 'shop' && activeCategory === 'watches' ? '#816430' : '#000000',
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.9rem',
-              fontWeight: 400,
+              fontSize: '0.92rem',
+              fontWeight: 700,
               cursor: 'pointer',
-              letterSpacing: '0.04em',
+              letterSpacing: '0.05em',
             }}
           >
             Watches
           </button>
         </nav>
 
-        {/* Right: Action Icons */}
+        {/* Right: Action Icons in Crisp Black */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }} className="navbar-action-icons">
           <button
             onClick={() => setIsSearchOpen(true)}
-            style={{ background: 'transparent', border: 'none', color: '#FFFFFF', cursor: 'pointer', padding: '0.2rem' }}
+            style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.2rem' }}
             title="Search"
           >
-            <Search size={19} />
+            <Search size={20} strokeWidth={2.2} />
           </button>
 
           <button
             onClick={() => setIsWishlistOpen(true)}
-            style={{ background: 'transparent', border: 'none', color: '#FFFFFF', cursor: 'pointer', position: 'relative', padding: '0.2rem' }}
+            style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', position: 'relative', padding: '0.2rem' }}
             title="Wishlist"
           >
-            <Heart size={19} />
+            <Heart size={20} strokeWidth={2.2} />
             {wishlist.length > 0 && (
               <span
                 style={{
                   position: 'absolute',
                   top: '-4px',
                   right: '-6px',
-                  backgroundColor: '#E6C687',
-                  color: '#070A08',
+                  backgroundColor: '#000000',
+                  color: '#FFFFFF',
                   fontSize: '0.65rem',
                   fontWeight: 700,
                   borderRadius: '50%',
@@ -250,18 +253,18 @@ export const Navbar: React.FC = () => {
 
           <button
             onClick={() => setIsCartOpen(true)}
-            style={{ background: 'transparent', border: 'none', color: '#FFFFFF', cursor: 'pointer', position: 'relative', padding: '0.2rem' }}
+            style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', position: 'relative', padding: '0.2rem' }}
             title="Cart"
           >
-            <ShoppingBag size={19} />
+            <ShoppingBag size={20} strokeWidth={2.2} />
             {cartItemCount > 0 && (
               <span
                 style={{
                   position: 'absolute',
                   top: '-4px',
                   right: '-6px',
-                  backgroundColor: '#E6C687',
-                  color: '#070A08',
+                  backgroundColor: '#000000',
+                  color: '#FFFFFF',
                   fontSize: '0.65rem',
                   fontWeight: 700,
                   borderRadius: '50%',
@@ -279,11 +282,11 @@ export const Navbar: React.FC = () => {
 
           <button
             onClick={() => setIsWishlistOpen(true)}
-            style={{ background: 'transparent', border: 'none', color: '#FFFFFF', cursor: 'pointer', padding: '0.2rem' }}
+            style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.2rem' }}
             title="Account"
             className="user-icon-btn"
           >
-            <User size={19} />
+            <User size={20} strokeWidth={2.2} />
           </button>
         </div>
       </div>
@@ -294,7 +297,7 @@ export const Navbar: React.FC = () => {
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            backgroundColor: 'rgba(0, 0, 0, 0.65)',
             backdropFilter: 'blur(6px)',
             zIndex: 2500,
             display: 'flex',
@@ -307,29 +310,29 @@ export const Navbar: React.FC = () => {
               width: '290px',
               maxWidth: '85vw',
               height: '100%',
-              backgroundColor: '#070A08',
-              borderRight: '1px solid rgba(230, 198, 135, 0.3)',
+              backgroundColor: '#E2D5BE',
+              borderRight: '1px solid rgba(163, 131, 73, 0.4)',
               padding: '2rem 1.6rem',
               display: 'flex',
               flexDirection: 'column',
-              boxShadow: '10px 0 30px rgba(0, 0, 0, 0.9)',
+              boxShadow: '10px 0 30px rgba(0, 0, 0, 0.2)',
               animation: 'slideInLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Drawer Header */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem', borderBottom: '1px solid rgba(230, 198, 135, 0.2)', paddingBottom: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem', borderBottom: '1px solid rgba(163, 131, 73, 0.3)', paddingBottom: '1rem' }}>
               <img
-                src="/img/logo3.png"
+                src="/img/scarletlogo.png"
                 alt="Scarlet Logo"
-                style={{ height: '42px', width: 'auto' }}
+                style={{ height: '52px', width: 'auto' }}
               />
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
-                  background: 'rgba(255, 255, 255, 0.08)',
+                  background: 'rgba(0, 0, 0, 0.1)',
                   border: 'none',
-                  color: '#FFFFFF',
+                  color: '#000000',
                   borderRadius: '50%',
                   width: '32px',
                   height: '32px',
@@ -350,9 +353,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: currentPage === 'home' ? '#E6C687' : '#FFFFFF',
+                  color: currentPage === 'home' ? '#816430' : '#000000',
                   fontSize: '1.05rem',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   textAlign: 'left',
                   cursor: 'pointer',
                   display: 'flex',
@@ -361,7 +364,7 @@ export const Navbar: React.FC = () => {
                 }}
               >
                 <span>Home</span>
-                {currentPage === 'home' && <span style={{ color: '#E6C687', fontSize: '0.8rem' }}>●</span>}
+                {currentPage === 'home' && <span style={{ color: '#816430', fontSize: '0.8rem' }}>●</span>}
               </button>
 
               <button
@@ -369,9 +372,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: currentPage === 'shop' && activeCategory === 'all' ? '#E6C687' : '#FFFFFF',
+                  color: currentPage === 'shop' && activeCategory === 'all' ? '#816430' : '#000000',
                   fontSize: '1.05rem',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   textAlign: 'left',
                   cursor: 'pointer',
                   display: 'flex',
@@ -380,12 +383,12 @@ export const Navbar: React.FC = () => {
                 }}
               >
                 <span>All Products (Shop)</span>
-                {currentPage === 'shop' && activeCategory === 'all' && <span style={{ color: '#E6C687', fontSize: '0.8rem' }}>●</span>}
+                {currentPage === 'shop' && activeCategory === 'all' && <span style={{ color: '#816430', fontSize: '0.8rem' }}>●</span>}
               </button>
 
-              <div style={{ height: '1px', backgroundColor: 'rgba(230, 198, 135, 0.15)', margin: '0.4rem 0' }} />
+              <div style={{ height: '1px', backgroundColor: 'rgba(163, 131, 73, 0.3)', margin: '0.4rem 0' }} />
 
-              <span style={{ color: '#E6C687', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+              <span style={{ color: '#816430', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                 CATEGORIES
               </span>
 
@@ -394,8 +397,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'rings' ? '#E6C687' : 'rgba(255, 255, 255, 0.85)',
+                  color: activeCategory === 'rings' ? '#816430' : '#000000',
                   fontSize: '0.96rem',
+                  fontWeight: 600,
                   textAlign: 'left',
                   cursor: 'pointer',
                   paddingLeft: '0.5rem',
@@ -409,8 +413,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'earrings' ? '#E6C687' : 'rgba(255, 255, 255, 0.85)',
+                  color: activeCategory === 'earrings' ? '#816430' : '#000000',
                   fontSize: '0.96rem',
+                  fontWeight: 600,
                   textAlign: 'left',
                   cursor: 'pointer',
                   paddingLeft: '0.5rem',
@@ -424,8 +429,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'bracelets' ? '#E6C687' : 'rgba(255, 255, 255, 0.85)',
+                  color: activeCategory === 'bracelets' ? '#816430' : '#000000',
                   fontSize: '0.96rem',
+                  fontWeight: 600,
                   textAlign: 'left',
                   cursor: 'pointer',
                   paddingLeft: '0.5rem',
@@ -439,8 +445,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'necklaces' ? '#E6C687' : 'rgba(255, 255, 255, 0.85)',
+                  color: activeCategory === 'necklaces' ? '#816430' : '#000000',
                   fontSize: '0.96rem',
+                  fontWeight: 600,
                   textAlign: 'left',
                   cursor: 'pointer',
                   paddingLeft: '0.5rem',
@@ -454,8 +461,9 @@ export const Navbar: React.FC = () => {
                 style={{
                   background: 'transparent',
                   border: 'none',
-                  color: activeCategory === 'watches' ? '#E6C687' : 'rgba(255, 255, 255, 0.85)',
+                  color: activeCategory === 'watches' ? '#816430' : '#000000',
                   fontSize: '0.96rem',
+                  fontWeight: 600,
                   textAlign: 'left',
                   cursor: 'pointer',
                   paddingLeft: '0.5rem',
@@ -488,12 +496,12 @@ export const Navbar: React.FC = () => {
           left: 0;
           width: 0%;
           height: 2px;
-          background-color: #E6C687;
-          box-shadow: 0 0 8px rgba(230, 198, 135, 0.6);
+          background-color: #816430;
+          box-shadow: 0 0 8px rgba(129, 100, 48, 0.6);
           transition: width 0.3s ease;
         }
         .nav-link-btn:hover {
-          color: #E6C687 !important;
+          color: #816430 !important;
         }
         .nav-link-btn:hover::after {
           width: 100%;
@@ -503,8 +511,8 @@ export const Navbar: React.FC = () => {
             padding: 0.85rem 1rem !important;
           }
           .navbar-logo-img {
-            height: 46px !important;
-            max-height: 46px !important;
+            height: 56px !important;
+            max-height: 56px !important;
           }
           .site-navbar-container {
             display: grid !important;

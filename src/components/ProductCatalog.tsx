@@ -59,7 +59,7 @@ export const ProductCatalog: React.FC = () => {
       id="catalog-section" 
       style={{ 
         padding: '3.5rem 1.5rem 4rem 1.5rem', 
-        backgroundColor: '#000000', 
+        backgroundColor: '#F5EEE4', 
         position: 'relative',
         overflow: 'hidden',
         maxWidth: '100vw',
@@ -69,11 +69,11 @@ export const ProductCatalog: React.FC = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container" style={{ maxWidth: '1360px', position: 'relative', zIndex: 1, overflow: 'hidden' }}>
-        {/* Section Sub-Tag & Header Row matching Lumière Reference Design */}
+        {/* Section Sub-Tag & Header Row */}
         <div style={{ marginBottom: '2.5rem' }}>
           <span
             style={{
-              color: '#E6C687',
+              color: '#A38349',
               fontSize: '0.75rem',
               fontWeight: 700,
               letterSpacing: '0.2em',
@@ -98,8 +98,8 @@ export const ProductCatalog: React.FC = () => {
               style={{
                 fontSize: 'clamp(2rem, 3.8vw, 3rem)',
                 fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-                fontWeight: 500,
-                color: '#FFFFFF',
+                fontWeight: 600,
+                color: '#0F3E36',
                 lineHeight: 1.15,
               }}
             >
@@ -114,7 +114,7 @@ export const ProductCatalog: React.FC = () => {
                 setActiveCategory('all');
               }}
               style={{
-                color: '#E6C687',
+                color: '#A38349',
                 fontSize: '0.78rem',
                 fontWeight: 600,
                 letterSpacing: '0.12em',
@@ -161,7 +161,7 @@ export const ProductCatalog: React.FC = () => {
                   className="lumiere-product-card"
                   onClick={() => setQuickViewProduct(product)}
                 >
-                  {/* White Luxury Image Pod - Pure White for 100% Seamless Image Match */}
+                  {/* White Luxury Image Pod */}
                   <div
                     style={{
                       backgroundColor: '#FFFFFF',
@@ -174,7 +174,8 @@ export const ProductCatalog: React.FC = () => {
                       position: 'relative',
                       overflow: 'hidden',
                       marginBottom: '0.9rem',
-                      border: '1px solid rgba(230, 198, 135, 0.25)',
+                      border: '1px solid rgba(163, 131, 73, 0.25)',
+                      boxShadow: '0 8px 25px rgba(15, 62, 54, 0.05)',
                       transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                     }}
                     className="lumiere-img-box"
@@ -189,7 +190,7 @@ export const ProductCatalog: React.FC = () => {
                         position: 'absolute',
                         top: '0.75rem',
                         right: '0.75rem',
-                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        backgroundColor: 'rgba(245, 238, 228, 0.85)',
                         border: 'none',
                         borderRadius: '50%',
                         width: '32px',
@@ -197,7 +198,7 @@ export const ProductCatalog: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: isSaved ? '#C81E1E' : 'rgba(0, 0, 0, 0.5)',
+                        color: isSaved ? '#C81E1E' : '#0F3E36',
                         cursor: 'pointer',
                         zIndex: 2,
                         transition: 'all 0.2s ease',
@@ -232,9 +233,9 @@ export const ProductCatalog: React.FC = () => {
                         bottom: '0.75rem',
                         left: '50%',
                         transform: 'translateX(-50%) translateY(50px)',
-                        background: 'linear-gradient(135deg, #FFF0BE 0%, #D4AF37 50%, #AA771C 100%)',
-                        color: '#070A08',
-                        border: 'none',
+                        background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
+                        color: '#FFFFFF',
+                        border: '1px solid #A38349',
                         padding: '0.45rem 1.1rem',
                         borderRadius: '999px',
                         fontSize: '0.72rem',
@@ -245,7 +246,7 @@ export const ProductCatalog: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.35rem',
-                        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.25)',
+                        boxShadow: '0 4px 15px rgba(15, 62, 54, 0.25)',
                         opacity: 0,
                         transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                         zIndex: 3,
@@ -261,7 +262,7 @@ export const ProductCatalog: React.FC = () => {
                   <h3
                     style={{
                       fontSize: '0.92rem',
-                      color: '#FFFFFF',
+                      color: '#0F3E36',
                       fontFamily: "var(--font-sans)",
                       fontWeight: 600,
                       marginBottom: '0.2rem',
@@ -275,7 +276,7 @@ export const ProductCatalog: React.FC = () => {
                   <span
                     style={{
                       fontSize: '0.74rem',
-                      color: 'rgba(255, 255, 255, 0.6)',
+                      color: '#5A6B63',
                       fontFamily: 'var(--font-sans)',
                       marginBottom: '0.35rem',
                       display: 'block',
@@ -288,7 +289,7 @@ export const ProductCatalog: React.FC = () => {
                     <span
                       style={{
                         fontSize: '0.98rem',
-                        color: '#FFFFFF',
+                        color: '#0F3E36',
                         fontFamily: 'var(--font-sans)',
                         fontWeight: 700,
                       }}
@@ -298,10 +299,10 @@ export const ProductCatalog: React.FC = () => {
 
                     {/* Star Rating & Review Count */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                      <span style={{ color: '#E0C896', fontSize: '0.75rem', letterSpacing: '0.04em' }}>
+                      <span style={{ color: '#A38349', fontSize: '0.75rem', letterSpacing: '0.04em' }}>
                         ★★★★★
                       </span>
-                      <span style={{ color: 'rgba(255, 255, 255, 0.45)', fontSize: '0.7rem' }}>
+                      <span style={{ color: '#72847C', fontSize: '0.7rem' }}>
                         ({product.reviewsCount || 48})
                       </span>
                     </div>
@@ -316,8 +317,8 @@ export const ProductCatalog: React.FC = () => {
       <style>{`
         .lumiere-img-box:hover {
           transform: translateY(-5px);
-          border-color: rgba(230, 198, 135, 0.6) !important;
-          box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+          border-color: #A38349 !important;
+          box-shadow: 0 12px 30px rgba(15, 62, 54, 0.12);
         }
         .lumiere-img-box:hover .product-img {
           transform: scale(1.08);
@@ -327,7 +328,7 @@ export const ProductCatalog: React.FC = () => {
           opacity: 1;
         }
         .lumiere-product-card:hover .product-name-heading {
-          color: #FAF0D9 !important;
+          color: #A38349 !important;
         }
         .heart-icon-btn:hover {
           transform: scale(1.12);

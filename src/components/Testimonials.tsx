@@ -40,7 +40,7 @@ export const Testimonials: React.FC = () => {
   return (
     <section
       style={{
-        backgroundColor: '#000000',
+        backgroundColor: '#F5EEE4',
         padding: '3.5rem 1.5rem 4rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
@@ -53,7 +53,7 @@ export const Testimonials: React.FC = () => {
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <span
             style={{
-              color: '#E6C687',
+              color: '#A38349',
               fontSize: '0.78rem',
               fontWeight: 700,
               letterSpacing: '0.2em',
@@ -69,8 +69,8 @@ export const Testimonials: React.FC = () => {
             style={{
               fontSize: 'clamp(2rem, 3.8vw, 3rem)',
               fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-              fontWeight: 500,
-              color: '#FFFFFF',
+              fontWeight: 600,
+              color: '#0F3E36',
               lineHeight: 1.15,
             }}
           >
@@ -91,31 +91,32 @@ export const Testimonials: React.FC = () => {
             <div
               key={rev.id}
               style={{
-                backgroundColor: '#070A08',
-                border: '1px solid rgba(230, 198, 135, 0.22)',
+                backgroundColor: '#FFFFFF',
+                border: '1px solid rgba(163, 131, 73, 0.25)',
                 borderRadius: '20px',
                 padding: '1.6rem 1.4rem',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
+                boxShadow: '0 8px 25px rgba(15, 62, 54, 0.05)',
                 transition: 'transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease',
               }}
               className="testimonial-card"
             >
               {/* Quote Icon Accent */}
-              <Quote size={24} style={{ color: 'rgba(230, 198, 135, 0.3)', marginBottom: '0.8rem' }} />
+              <Quote size={24} style={{ color: '#A38349', marginBottom: '0.8rem', opacity: 0.6 }} />
 
               {/* 5 Gold Stars */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', marginBottom: '0.85rem' }}>
                 {[...Array(rev.rating)].map((_, i) => (
-                  <Star key={i} size={14} fill="#E6C687" style={{ color: '#E6C687' }} />
+                  <Star key={i} size={14} fill="#A38349" style={{ color: '#A38349' }} />
                 ))}
               </div>
 
               {/* Review Text */}
               <p
                 style={{
-                  color: 'rgba(255, 255, 255, 0.8)',
+                  color: '#455850',
                   fontSize: '0.85rem',
                   lineHeight: 1.55,
                   marginBottom: '1.5rem',
@@ -130,7 +131,7 @@ export const Testimonials: React.FC = () => {
               <div
                 style={{
                   paddingTop: '1rem',
-                  borderTop: '1px solid rgba(230, 198, 135, 0.15)',
+                  borderTop: '1px solid rgba(163, 131, 73, 0.15)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
@@ -138,17 +139,17 @@ export const Testimonials: React.FC = () => {
               >
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                    <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#FFFFFF' }}>{rev.author}</span>
-                    <CheckCircle2 size={13} style={{ color: '#E6C687' }} />
+                    <span style={{ fontSize: '0.88rem', fontWeight: 700, color: '#0F3E36' }}>{rev.author}</span>
+                    <CheckCircle2 size={13} style={{ color: '#A38349' }} />
                   </div>
-                  <span style={{ fontSize: '0.74rem', color: 'rgba(255, 255, 255, 0.5)' }}>{rev.location}</span>
+                  <span style={{ fontSize: '0.74rem', color: '#72847C' }}>{rev.location}</span>
                 </div>
 
                 <span
                   style={{
                     fontSize: '0.7rem',
-                    color: '#E6C687',
-                    backgroundColor: 'rgba(230, 198, 135, 0.1)',
+                    color: '#0F3E36',
+                    backgroundColor: 'rgba(163, 131, 73, 0.12)',
                     padding: '0.2rem 0.6rem',
                     borderRadius: '999px',
                     fontWeight: 600,
@@ -165,8 +166,8 @@ export const Testimonials: React.FC = () => {
       <style>{`
         .testimonial-card:hover {
           transform: translateY(-5px);
-          border-color: rgba(230, 198, 135, 0.5) !important;
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(230, 198, 135, 0.12) !important;
+          border-color: #A38349 !important;
+          box-shadow: 0 15px 35px rgba(15, 62, 54, 0.12) !important;
         }
         @media (max-width: 1024px) {
           .testimonials-grid {

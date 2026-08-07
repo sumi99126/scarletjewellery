@@ -66,7 +66,7 @@ export const App: React.FC = () => {
       {/* Site Preloader */}
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-      <div style={{ visibility: loading ? 'hidden' : 'visible', minHeight: '100vh', backgroundColor: '#000000' }}>
+      <div style={{ visibility: loading ? 'hidden' : 'visible', minHeight: '100vh', backgroundColor: '#F5EEE4' }}>
         {/* Header / Navbar */}
         <Navbar />
 

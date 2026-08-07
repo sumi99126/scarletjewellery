@@ -9,8 +9,8 @@ export const Footer: React.FC = () => {
   return (
     <footer
       style={{
-        backgroundColor: '#040605',
-        borderTop: '1px solid rgba(230, 198, 135, 0.2)',
+        backgroundColor: '#092B24',
+        borderTop: '1px solid rgba(163, 131, 73, 0.3)',
         padding: '4rem 1.5rem 2.5rem 1.5rem',
         color: '#FFFFFF',
       }}
@@ -30,15 +30,20 @@ export const Footer: React.FC = () => {
           <div>
             <a href="#" style={{ display: 'inline-block', marginBottom: '1.2rem' }}>
               <img
-                src="/img/logo3.png"
-                alt="Scarlet Fine Jewelry"
-                style={{ height: '52px', width: 'auto', objectFit: 'contain' }}
+                src="/img/scarletlogo1.png"
+                alt="Scarlet Fine Jewelry Logo"
+                style={{
+                  height: '68px',
+                  width: 'auto',
+                  maxHeight: '68px',
+                  objectFit: 'contain',
+                }}
               />
             </a>
-            <p style={{ fontSize: '0.84rem', color: 'rgba(255, 255, 255, 0.65)', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+            <p style={{ fontSize: '0.84rem', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.6, marginBottom: '1.2rem' }}>
               Scarlet Fine Artificial Jewelry & Luxury Timepieces. Premium gold plated, anti-tarnish & crystal gemstone creations.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: '#E6C687' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.78rem', color: '#C8AA6E' }}>
               <MapPin size={15} style={{ flexShrink: 0 }} />
               <span>Lahore Boutique Atelier &bull; Express Delivery Across Pakistan</span>
             </div>
@@ -46,14 +51,14 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Quick Collections */}
           <div>
-            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#FAF0D9', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#C8AA6E', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Fashion Collections
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.84rem' }}>
               <li>
                 <button
                   onClick={() => setActiveCategory('rings')}
-                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.7)', cursor: 'pointer', padding: 0 }}
+                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', padding: 0 }}
                   className="footer-link"
                 >
                   Gold Plated Rings
@@ -62,7 +67,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => setActiveCategory('necklaces')}
-                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.7)', cursor: 'pointer', padding: 0 }}
+                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', padding: 0 }}
                   className="footer-link"
                 >
                   Pendant & Emerald Necklaces
@@ -71,7 +76,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => setActiveCategory('bracelets')}
-                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.7)', cursor: 'pointer', padding: 0 }}
+                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', padding: 0 }}
                   className="footer-link"
                 >
                   Gold Bracelet Stacks
@@ -80,7 +85,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => setActiveCategory('watches')}
-                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.7)', cursor: 'pointer', padding: 0 }}
+                  style={{ background: 'none', border: 'none', color: 'rgba(255, 255, 255, 0.8)', cursor: 'pointer', padding: 0 }}
                   className="footer-link"
                 >
                   Luxury Watches Collection
@@ -91,37 +96,37 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Client Care */}
           <div>
-            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#FAF0D9', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#C8AA6E', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Client Care
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: '0.84rem' }}>
               <li>
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Anti-Tarnish Guarantee</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Anti-Tarnish Guarantee</span>
               </li>
               <li>
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Luxury Box Packaging</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Luxury Box Packaging</span>
               </li>
               <li>
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>7-Day Easy Exchanges</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>7-Day Easy Exchanges</span>
               </li>
               <li>
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Cash on Delivery Available</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Cash on Delivery Available</span>
               </li>
             </ul>
           </div>
 
           {/* Col 4: Trust & Instagram */}
           <div>
-            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#FAF0D9', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <h4 style={{ fontSize: '1rem', fontFamily: "'Cormorant Garamond', serif", color: '#C8AA6E', marginBottom: '1.1rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Quality & Social
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.65)', marginBottom: '1.2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.82rem', color: 'rgba(255, 255, 255, 0.75)', marginBottom: '1.2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <ShieldCheck size={16} style={{ color: '#E6C687' }} />
+                <ShieldCheck size={16} style={{ color: '#C8AA6E' }} />
                 <span>Anti-Tarnish Gold Plating</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                <Gem size={16} style={{ color: '#E6C687' }} />
+                <Gem size={16} style={{ color: '#C8AA6E' }} />
                 <span>High-Grade Zircon & Crystals</span>
               </div>
             </div>
@@ -134,7 +139,7 @@ export const Footer: React.FC = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.45rem',
-                color: '#E6C687',
+                color: '#C8AA6E',
                 fontSize: '0.78rem',
                 fontWeight: 600,
                 letterSpacing: '0.08em',
@@ -151,7 +156,7 @@ export const Footer: React.FC = () => {
         {/* Copyright & Legal Links */}
         <div
           style={{
-            borderTop: '1px solid rgba(230, 198, 135, 0.15)',
+            borderTop: '1px solid rgba(163, 131, 73, 0.25)',
             paddingTop: '1.8rem',
             display: 'flex',
             flexWrap: 'wrap',
@@ -159,14 +164,14 @@ export const Footer: React.FC = () => {
             justifyContent: 'space-between',
             gap: '1rem',
             fontSize: '0.76rem',
-            color: 'rgba(255, 255, 255, 0.5)',
+            color: 'rgba(255, 255, 255, 0.6)',
           }}
         >
           <span>&copy; {new Date().getFullYear()} SCARLET FINE JEWELRY. All Rights Reserved.</span>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'none' }}>Privacy Policy</a>
-            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'none' }}>Terms of Service</a>
-            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'none' }}>Shipping Policy</a>
+            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none' }}>Privacy Policy</a>
+            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none' }}>Terms of Service</a>
+            <a href="#" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none' }}>Shipping Policy</a>
           </div>
         </div>
         </ScrollReveal>
@@ -174,7 +179,7 @@ export const Footer: React.FC = () => {
 
       <style>{`
         .footer-link:hover {
-          color: #E6C687 !important;
+          color: #C8AA6E !important;
         }
         .footer-insta-btn:hover {
           opacity: 0.8;

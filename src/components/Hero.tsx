@@ -98,8 +98,8 @@ export const Hero: React.FC = () => {
   return (
     <section
       style={{
-        backgroundColor: '#000000',
-        padding: '2.5rem 1.5rem 1rem 1.5rem',
+        backgroundColor: '#F5EEE4',
+        padding: '2.5rem 1.5rem 1.5rem 1.5rem',
         overflow: 'hidden',
       }}
       onMouseEnter={() => setIsPaused(true)}
@@ -107,13 +107,13 @@ export const Hero: React.FC = () => {
       className="animate-fade-in-up"
     >
       <div className="container" style={{ maxWidth: '1360px' }}>
-        {/* Luxury Section Heading above Carousel (2 lines break) */}
+        {/* Luxury Section Heading above Carousel */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }} className="hero-heading-block">
           <span
             style={{
-              color: '#E6C687',
+              color: '#A38349',
               fontSize: '0.72rem',
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
               display: 'block',
@@ -127,8 +127,8 @@ export const Hero: React.FC = () => {
             style={{
               fontSize: 'clamp(2.1rem, 3.8vw, 3.2rem)',
               fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-              fontWeight: 400,
-              color: '#FFFFFF',
+              fontWeight: 600,
+              color: '#0F3E36',
               lineHeight: 1.22,
               letterSpacing: '0.02em',
             }}
@@ -147,7 +147,7 @@ export const Hero: React.FC = () => {
             gridTemplateColumns: 'repeat(5, 1fr)',
             gap: '1.2rem',
             alignItems: 'center',
-            marginBottom: '0.5rem',
+            marginBottom: '1rem',
             minHeight: '435px',
           }}
           className="hero-cards-grid"
@@ -175,9 +175,9 @@ export const Hero: React.FC = () => {
                   cursor: 'pointer',
                   transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
                   boxShadow: isCenter
-                    ? '0 30px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.25)'
-                    : '0 10px 25px rgba(0, 0, 0, 0.6)',
-                  border: isCenter ? '1px solid rgba(212, 175, 55, 0.5)' : '1px solid rgba(255, 255, 255, 0.1)',
+                    ? '0 25px 50px rgba(15, 62, 54, 0.25), 0 0 25px rgba(163, 131, 73, 0.25)'
+                    : '0 10px 25px rgba(15, 62, 54, 0.1)',
+                  border: isCenter ? '2px solid #A38349' : '1px solid rgba(163, 131, 73, 0.25)',
                   transform: `rotate(${rotationDegree}deg) translateY(${translateYVal}px)`,
                 }}
                 className={`hero-card-item card-pos-${idx}`}
@@ -207,13 +207,14 @@ export const Hero: React.FC = () => {
               width: '44px',
               height: '44px',
               borderRadius: '50%',
-              backgroundColor: 'transparent',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              color: '#FFFFFF',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.4)',
+              color: '#0F3E36',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(15, 62, 54, 0.08)',
               transition: 'var(--transition-fast)',
             }}
             className="arrow-btn"
@@ -228,13 +229,14 @@ export const Hero: React.FC = () => {
               width: '44px',
               height: '44px',
               borderRadius: '50%',
-              backgroundColor: 'transparent',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              color: '#FFFFFF',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.4)',
+              color: '#0F3E36',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(15, 62, 54, 0.08)',
               transition: 'var(--transition-fast)',
             }}
             className="arrow-btn"
@@ -250,8 +252,9 @@ export const Hero: React.FC = () => {
           transform: scale(1.08);
         }
         .arrow-btn:hover {
-          border-color: #FFFFFF !important;
-          background: rgba(255, 255, 255, 0.15) !important;
+          border-color: #A38349 !important;
+          background: #FAF5EE !important;
+          color: #A38349 !important;
         }
         @media (max-width: 768px) {
           .hero-sub-tag {

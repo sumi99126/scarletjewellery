@@ -23,7 +23,7 @@ export const Wishlist: React.FC = () => {
         position: 'fixed',
         inset: 0,
         zIndex: 2250,
-        backgroundColor: 'rgba(5, 8, 6, 0.75)',
+        backgroundColor: 'rgba(15, 62, 54, 0.5)',
         backdropFilter: 'blur(8px)',
         display: 'flex',
         justifyContent: 'flex-end',
@@ -35,11 +35,11 @@ export const Wishlist: React.FC = () => {
           width: '100%',
           maxWidth: '460px',
           height: '100%',
-          backgroundColor: '#000000',
-          borderLeft: '1px solid rgba(230, 198, 135, 0.3)',
+          backgroundColor: '#FFFFFF',
+          borderLeft: '1px solid rgba(163, 131, 73, 0.3)',
           display: 'flex',
           flexDirection: 'column',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.9)',
+          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.2)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -47,17 +47,17 @@ export const Wishlist: React.FC = () => {
         <div
           style={{
             padding: '1.4rem 1.5rem',
-            borderBottom: '1px solid rgba(230, 198, 135, 0.2)',
+            borderBottom: '1px solid rgba(163, 131, 73, 0.25)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: '#000000',
+            backgroundColor: '#FAF5EE',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Heart size={20} fill="#E6C687" style={{ color: '#E6C687' }} />
-            <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-sans)', fontWeight: 600, color: '#FFFFFF' }}>Your Wishlist</h3>
-            <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.5)' }}>({savedProducts.length})</span>
+            <Heart size={20} fill="#A38349" style={{ color: '#A38349' }} />
+            <h3 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-sans)', fontWeight: 600, color: '#0F3E36' }}>Your Wishlist</h3>
+            <span style={{ fontSize: '0.8rem', color: '#72847C' }}>({savedProducts.length})</span>
           </div>
 
           <button
@@ -65,7 +65,7 @@ export const Wishlist: React.FC = () => {
             style={{
               background: 'transparent',
               border: 'none',
-              color: 'var(--text-primary)',
+              color: '#0F3E36',
               cursor: 'pointer',
             }}
           >
@@ -77,11 +77,11 @@ export const Wishlist: React.FC = () => {
         <div style={{ flexGrow: 1, overflowY: 'auto', padding: '1.5rem' }}>
           {savedProducts.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
-              <Heart size={48} style={{ color: 'var(--text-muted)', opacity: 0.3, marginBottom: '1rem' }} />
-              <h4 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+              <Heart size={48} style={{ color: '#72847C', opacity: 0.3, marginBottom: '1rem' }} />
+              <h4 style={{ fontSize: '1.2rem', fontFamily: 'var(--font-serif)', color: '#0F3E36', marginBottom: '0.5rem' }}>
                 Your Private Wishlist is Empty
               </h4>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '0.85rem', color: '#5A6B63' }}>
                 Click the heart icon on any jewelry masterpiece to save it to your private vault.
               </p>
             </div>
@@ -93,8 +93,8 @@ export const Wishlist: React.FC = () => {
                   style={{
                     display: 'flex',
                     gap: '1rem',
-                    backgroundColor: 'rgba(7, 10, 8, 0.6)',
-                    border: '1px solid var(--gold-border)',
+                    backgroundColor: '#FAF5EE',
+                    border: '1px solid rgba(163, 131, 73, 0.25)',
                     borderRadius: 'var(--radius-sm)',
                     padding: '0.85rem',
                   }}
@@ -107,16 +107,16 @@ export const Wishlist: React.FC = () => {
                       height: '75px',
                       objectFit: 'cover',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1px solid rgba(212, 175, 55, 0.2)',
+                      border: '1px solid rgba(163, 131, 73, 0.2)',
                     }}
                   />
 
                   <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
-                      <h4 style={{ fontSize: '0.95rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)', lineHeight: 1.2 }}>
+                      <h4 style={{ fontSize: '0.95rem', fontFamily: 'var(--font-serif)', color: '#0F3E36', lineHeight: 1.2 }}>
                         {product.name}
                       </h4>
-                      <div style={{ fontSize: '0.9rem', color: 'var(--gold-primary)', fontWeight: 600, marginTop: '0.25rem' }}>
+                      <div style={{ fontSize: '0.9rem', color: '#A38349', fontWeight: 600, marginTop: '0.25rem' }}>
                         {formatPrice(product.priceUSD)}
                       </div>
                     </div>

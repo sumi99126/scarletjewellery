@@ -6,8 +6,8 @@ export const TrustValuesBar: React.FC = () => {
   return (
     <section
       style={{
-        backgroundColor: '#000000',
-        padding: '1.5rem 1.5rem 2.5rem 1.5rem',
+        backgroundColor: '#F5EEE4',
+        padding: '2rem 1.5rem 2.5rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
         maxWidth: '100vw',
@@ -16,7 +16,7 @@ export const TrustValuesBar: React.FC = () => {
       className="trust-values-section"
     >
       <div className="container" style={{ maxWidth: '1360px', margin: '0 auto' }}>
-        {/* Trust & Service Values Grid (4 Columns) matching Lumière Reference */}
+        {/* Trust & Service Values Grid (4 Columns) */}
         <div
           style={{
             display: 'grid',
@@ -34,10 +34,10 @@ export const TrustValuesBar: React.FC = () => {
               gap: '1rem',
               padding: '1.2rem 1.2rem',
               borderRadius: '16px',
-              backgroundColor: '#070A08',
-              border: '1px solid rgba(230, 198, 135, 0.22)',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5)',
-              transition: 'transform 0.3s ease, border-color 0.3s ease',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.25)',
+              boxShadow: '0 10px 25px rgba(15, 62, 54, 0.05)',
+              transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
             }}
             className="trust-card"
           >
@@ -46,21 +46,21 @@ export const TrustValuesBar: React.FC = () => {
                 width: '44px',
                 height: '44px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(230, 198, 135, 0.12)',
+                backgroundColor: 'rgba(163, 131, 73, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#E6C687',
+                color: '#A38349',
                 flexShrink: 0,
               }}
             >
               <RotateCcw size={20} />
             </div>
             <div>
-              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#FFFFFF', marginBottom: '0.15rem' }}>
+              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#0F3E36', marginBottom: '0.15rem' }}>
                 Easy Returns
               </h4>
-              <p style={{ fontSize: '0.76rem', color: 'rgba(255, 255, 255, 0.55)', margin: 0 }}>
+              <p style={{ fontSize: '0.76rem', color: '#5A6B63', margin: 0 }}>
                 30-day return policy
               </p>
             </div>
@@ -76,10 +76,10 @@ export const TrustValuesBar: React.FC = () => {
               gap: '1rem',
               padding: '1.2rem 1.2rem',
               borderRadius: '16px',
-              backgroundColor: '#070A08',
-              border: '1px solid rgba(230, 198, 135, 0.22)',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5)',
-              transition: 'transform 0.3s ease, border-color 0.3s ease',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.25)',
+              boxShadow: '0 10px 25px rgba(15, 62, 54, 0.05)',
+              transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
             }}
             className="trust-card"
           >
@@ -88,21 +88,21 @@ export const TrustValuesBar: React.FC = () => {
                 width: '44px',
                 height: '44px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(230, 198, 135, 0.12)',
+                backgroundColor: 'rgba(163, 131, 73, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#E6C687',
+                color: '#A38349',
                 flexShrink: 0,
               }}
             >
               <ShieldCheck size={20} />
             </div>
             <div>
-              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#FFFFFF', marginBottom: '0.15rem' }}>
+              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#0F3E36', marginBottom: '0.15rem' }}>
                 Secure Payment
               </h4>
-              <p style={{ fontSize: '0.76rem', color: 'rgba(255, 255, 255, 0.55)', margin: 0 }}>
+              <p style={{ fontSize: '0.76rem', color: '#5A6B63', margin: 0 }}>
                 100% secure checkout
               </p>
             </div>
@@ -118,10 +118,10 @@ export const TrustValuesBar: React.FC = () => {
               gap: '1rem',
               padding: '1.2rem 1.2rem',
               borderRadius: '16px',
-              backgroundColor: '#070A08',
-              border: '1px solid rgba(230, 198, 135, 0.22)',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5)',
-              transition: 'transform 0.3s ease, border-color 0.3s ease',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.25)',
+              boxShadow: '0 10px 25px rgba(15, 62, 54, 0.05)',
+              transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
             }}
             className="trust-card"
           >
@@ -130,21 +130,21 @@ export const TrustValuesBar: React.FC = () => {
                 width: '44px',
                 height: '44px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(230, 198, 135, 0.12)',
+                backgroundColor: 'rgba(163, 131, 73, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#E6C687',
+                color: '#A38349',
                 flexShrink: 0,
               }}
             >
               <Gem size={20} />
             </div>
             <div>
-              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#FFFFFF', marginBottom: '0.15rem' }}>
+              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#0F3E36', marginBottom: '0.15rem' }}>
                 Exceptional Quality
               </h4>
-              <p style={{ fontSize: '0.76rem', color: 'rgba(255, 255, 255, 0.55)', margin: 0 }}>
+              <p style={{ fontSize: '0.76rem', color: '#5A6B63', margin: 0 }}>
                 Crafted with precision
               </p>
             </div>
@@ -160,10 +160,10 @@ export const TrustValuesBar: React.FC = () => {
               gap: '1rem',
               padding: '1.2rem 1.2rem',
               borderRadius: '16px',
-              backgroundColor: '#070A08',
-              border: '1px solid rgba(230, 198, 135, 0.22)',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5)',
-              transition: 'transform 0.3s ease, border-color 0.3s ease',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(163, 131, 73, 0.25)',
+              boxShadow: '0 10px 25px rgba(15, 62, 54, 0.05)',
+              transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
             }}
             className="trust-card"
           >
@@ -172,21 +172,21 @@ export const TrustValuesBar: React.FC = () => {
                 width: '44px',
                 height: '44px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(230, 198, 135, 0.12)',
+                backgroundColor: 'rgba(163, 131, 73, 0.15)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#E6C687',
+                color: '#A38349',
                 flexShrink: 0,
               }}
             >
               <Headphones size={20} />
             </div>
             <div>
-              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#FFFFFF', marginBottom: '0.15rem' }}>
+              <h4 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#0F3E36', marginBottom: '0.15rem' }}>
                 Dedicated Support
               </h4>
-              <p style={{ fontSize: '0.76rem', color: 'rgba(255, 255, 255, 0.55)', margin: 0 }}>
+              <p style={{ fontSize: '0.76rem', color: '#5A6B63', margin: 0 }}>
                 24/7 customer support
               </p>
             </div>
@@ -202,7 +202,8 @@ export const TrustValuesBar: React.FC = () => {
         }
         .trust-card:hover {
           transform: translateY(-4px);
-          border-color: rgba(230, 198, 135, 0.5) !important;
+          border-color: #A38349 !important;
+          box-shadow: 0 12px 30px rgba(15, 62, 54, 0.12) !important;
         }
         @media (max-width: 1024px) {
           .trust-values-grid {

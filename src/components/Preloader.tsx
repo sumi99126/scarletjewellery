@@ -38,8 +38,8 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         position: 'fixed',
         inset: 0,
         zIndex: 9999,
-        backgroundColor: '#050806',
-        backgroundImage: 'radial-gradient(circle at center, rgba(14, 58, 40, 0.4) 0%, rgba(5, 8, 6, 0.98) 70%)',
+        backgroundColor: '#F5EEE4',
+        backgroundImage: 'radial-gradient(circle at center, rgba(163, 131, 73, 0.15) 0%, rgba(245, 238, 228, 0.98) 70%)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -52,8 +52,8 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
       {/* Gold Crest Logo */}
       <div style={{ marginBottom: '0.5rem', textAlign: 'center' }}>
         <img
-          src="/img/logo3.png"
-          alt="Scarlet Gold Emblem"
+          src="/img/scarletlogo.png"
+          alt="Scarlet Emblem"
           className="animate-pulse-gold"
           style={{
             height: '160px',
@@ -70,7 +70,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         style={{
           width: '260px',
           height: '2px',
-          backgroundColor: 'rgba(212, 175, 55, 0.15)',
+          backgroundColor: 'rgba(163, 131, 73, 0.2)',
           position: 'relative',
           overflow: 'hidden',
           borderRadius: '2px',

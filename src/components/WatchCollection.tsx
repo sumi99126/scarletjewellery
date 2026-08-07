@@ -174,7 +174,7 @@ export const WatchCollection: React.FC = () => {
     <section
       id="watch-collection-section"
       style={{
-        backgroundColor: '#000000',
+        backgroundColor: '#FAF5EE',
         padding: '3.5rem 1.5rem 4rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
@@ -190,7 +190,7 @@ export const WatchCollection: React.FC = () => {
           <div style={{ marginBottom: '2.5rem' }}>
             <span
               style={{
-                color: '#E6C687',
+                color: '#A38349',
                 fontSize: '0.75rem',
                 fontWeight: 700,
                 letterSpacing: '0.2em',
@@ -215,8 +215,8 @@ export const WatchCollection: React.FC = () => {
                 style={{
                   fontSize: 'clamp(2rem, 3.8vw, 3rem)',
                   fontFamily: "'Cormorant Garamond', 'Cinzel', Georgia, serif",
-                  fontWeight: 500,
-                  color: '#FFFFFF',
+                  fontWeight: 600,
+                  color: '#0F3E36',
                   lineHeight: 1.15,
                 }}
               >
@@ -231,7 +231,7 @@ export const WatchCollection: React.FC = () => {
                   setActiveCategory('watches');
                 }}
                 style={{
-                  color: '#E6C687',
+                  color: '#A38349',
                   fontSize: '0.78rem',
                   fontWeight: 600,
                   letterSpacing: '0.12em',
@@ -264,7 +264,6 @@ export const WatchCollection: React.FC = () => {
           >
             {extendedWatches.map((product, idx) => {
               const isSaved = isInWishlist(product.id);
-              const isDarkImg = product.primaryImage !== '/img/p5.png';
 
               return (
                 <div
@@ -284,17 +283,18 @@ export const WatchCollection: React.FC = () => {
                   {/* Image Pod */}
                   <div
                     style={{
-                      backgroundColor: isDarkImg ? '#070A08' : '#FFFFFF',
+                      backgroundColor: '#FFFFFF',
                       borderRadius: '16px',
                       height: '245px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      padding: isDarkImg ? '0' : '1.2rem',
+                      padding: '1.2rem',
                       position: 'relative',
                       overflow: 'hidden',
                       marginBottom: '0.9rem',
-                      border: '1px solid rgba(230, 198, 135, 0.25)',
+                      border: '1px solid rgba(163, 131, 73, 0.25)',
+                      boxShadow: '0 8px 25px rgba(15, 62, 54, 0.05)',
                       transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                     }}
                     className="watch-img-box"
@@ -309,7 +309,7 @@ export const WatchCollection: React.FC = () => {
                         position: 'absolute',
                         top: '0.75rem',
                         right: '0.75rem',
-                        backgroundColor: 'rgba(255, 255, 255, 0.85)',
+                        backgroundColor: 'rgba(245, 238, 228, 0.85)',
                         border: 'none',
                         borderRadius: '50%',
                         width: '32px',
@@ -317,7 +317,7 @@ export const WatchCollection: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: isSaved ? '#C81E1E' : 'rgba(0, 0, 0, 0.5)',
+                        color: isSaved ? '#C81E1E' : '#0F3E36',
                         cursor: 'pointer',
                         zIndex: 2,
                         transition: 'all 0.2s ease',
@@ -335,7 +335,7 @@ export const WatchCollection: React.FC = () => {
                       style={{
                         width: '100%',
                         height: '100%',
-                        objectFit: isDarkImg ? 'cover' : 'contain',
+                        objectFit: 'contain',
                         objectPosition: 'center',
                         transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
                       }}
@@ -353,9 +353,9 @@ export const WatchCollection: React.FC = () => {
                         bottom: '0.75rem',
                         left: '50%',
                         transform: 'translateX(-50%) translateY(50px)',
-                        background: 'linear-gradient(135deg, #FAF0D9 0%, #E6C687 50%, #C59E4E 100%)',
-                        color: '#070A08',
-                        border: 'none',
+                        background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
+                        color: '#FFFFFF',
+                        border: '1px solid #A38349',
                         padding: '0.45rem 1.1rem',
                         borderRadius: '999px',
                         fontSize: '0.72rem',
@@ -366,7 +366,7 @@ export const WatchCollection: React.FC = () => {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.35rem',
-                        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.25)',
+                        boxShadow: '0 4px 15px rgba(15, 62, 54, 0.25)',
                         opacity: 0,
                         transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                         zIndex: 3,
@@ -382,7 +382,7 @@ export const WatchCollection: React.FC = () => {
                   <h3
                     style={{
                       fontSize: '0.92rem',
-                      color: '#FFFFFF',
+                      color: '#0F3E36',
                       fontFamily: 'var(--font-sans)',
                       fontWeight: 600,
                       marginBottom: '0.2rem',
@@ -396,7 +396,7 @@ export const WatchCollection: React.FC = () => {
                   <span
                     style={{
                       fontSize: '0.74rem',
-                      color: 'rgba(255, 255, 255, 0.6)',
+                      color: '#5A6B63',
                       fontFamily: 'var(--font-sans)',
                       marginBottom: '0.35rem',
                       display: 'block',
@@ -409,7 +409,7 @@ export const WatchCollection: React.FC = () => {
                     <span
                       style={{
                         fontSize: '0.98rem',
-                        color: '#FFFFFF',
+                        color: '#0F3E36',
                         fontFamily: 'var(--font-sans)',
                         fontWeight: 700,
                       }}
@@ -419,10 +419,10 @@ export const WatchCollection: React.FC = () => {
 
                     {/* Star Rating */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                      <span style={{ color: '#E0C896', fontSize: '0.75rem', letterSpacing: '0.04em' }}>
+                      <span style={{ color: '#A38349', fontSize: '0.75rem', letterSpacing: '0.04em' }}>
                         ★★★★★
                       </span>
-                      <span style={{ color: 'rgba(255, 255, 255, 0.45)', fontSize: '0.7rem' }}>
+                      <span style={{ color: '#72847C', fontSize: '0.7rem' }}>
                         ({product.reviewsCount || 48})
                       </span>
                     </div>
@@ -437,8 +437,8 @@ export const WatchCollection: React.FC = () => {
       <style>{`
         .watch-img-box:hover {
           transform: translateY(-5px);
-          border-color: rgba(230, 198, 135, 0.6) !important;
-          box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+          border-color: #A38349 !important;
+          box-shadow: 0 12px 30px rgba(15, 62, 54, 0.12);
         }
         .watch-img-box:hover .product-img {
           transform: scale(1.08);
@@ -448,7 +448,7 @@ export const WatchCollection: React.FC = () => {
           opacity: 1;
         }
         .watch-product-card:hover .product-name-heading {
-          color: #FAF0D9 !important;
+          color: #A38349 !important;
         }
         .heart-icon-btn:hover {
           transform: scale(1.12);

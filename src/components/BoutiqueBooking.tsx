@@ -12,8 +12,8 @@ export const BoutiqueBooking: React.FC = () => {
     phone: '',
     preferredDate: '',
     preferredTime: '14:00',
-    boutiqueLocation: 'Geneva Atelier & Flagship',
-    interestCategory: 'Haute Joaillerie & Rare Emeralds',
+    boutiqueLocation: 'Lahore Atelier & Boutique',
+    interestCategory: 'Fashion Jewelry & Timepieces',
     notes: '',
   });
 
@@ -39,7 +39,7 @@ export const BoutiqueBooking: React.FC = () => {
         position: 'fixed',
         inset: 0,
         zIndex: 2500,
-        backgroundColor: 'rgba(5, 8, 6, 0.88)',
+        backgroundColor: 'rgba(15, 62, 54, 0.65)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         display: 'flex',
@@ -57,7 +57,9 @@ export const BoutiqueBooking: React.FC = () => {
           maxWidth: '680px',
           padding: '2.5rem',
           position: 'relative',
-          backgroundColor: '#0E1A14',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid rgba(163, 131, 73, 0.35)',
+          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.15)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -67,9 +69,9 @@ export const BoutiqueBooking: React.FC = () => {
             position: 'absolute',
             top: '1.5rem',
             right: '1.5rem',
-            background: 'rgba(7, 10, 8, 0.6)',
-            border: '1px solid var(--gold-border)',
-            color: 'var(--gold-light)',
+            background: '#FAF5EE',
+            border: '1px solid rgba(163, 131, 73, 0.3)',
+            color: '#0F3E36',
             width: '36px',
             height: '36px',
             borderRadius: '50%',
@@ -90,9 +92,9 @@ export const BoutiqueBooking: React.FC = () => {
                 width: '70px',
                 height: '70px',
                 borderRadius: '50%',
-                background: 'rgba(212, 175, 55, 0.15)',
-                border: '1px solid var(--gold-primary)',
-                color: 'var(--gold-primary)',
+                background: 'rgba(163, 131, 73, 0.15)',
+                border: '1px solid #A38349',
+                color: '#A38349',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -104,33 +106,33 @@ export const BoutiqueBooking: React.FC = () => {
 
             <span className="badge-gold" style={{ marginBottom: '0.75rem' }}>VIP RESERVATION CONFIRMED</span>
 
-            <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-serif)', marginBottom: '0.5rem' }}>
+            <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-serif)', color: '#0F3E36', marginBottom: '0.5rem' }}>
               We Await Your Visit
             </h2>
 
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+            <p style={{ color: '#5A6B63', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
               Your private viewing at <strong>{formData.boutiqueLocation}</strong> has been reserved for{' '}
               <strong>{formData.preferredDate || 'your requested date'}</strong> at <strong>{formData.preferredTime}</strong>.
             </p>
 
             <div
               style={{
-                backgroundColor: 'rgba(7, 10, 8, 0.6)',
-                border: '1px dashed var(--gold-primary)',
+                backgroundColor: '#FAF5EE',
+                border: '1px dashed #A38349',
                 padding: '1.25rem',
                 borderRadius: 'var(--radius-sm)',
                 marginBottom: '2rem',
               }}
             >
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block' }}>
+              <span style={{ fontSize: '0.75rem', color: '#72847C', textTransform: 'uppercase', display: 'block' }}>
                 Private Concierge Booking Reference
               </span>
-              <strong style={{ fontSize: '1.4rem', color: 'var(--gold-light)', fontFamily: 'var(--font-serif)' }}>
+              <strong style={{ fontSize: '1.4rem', color: '#0F3E36', fontFamily: 'var(--font-serif)' }}>
                 {submittedRef}
               </strong>
             </div>
 
-            <button onClick={handleClose} className="btn-gold">
+            <button onClick={handleClose} className="btn-emerald">
               Return to Catalog
             </button>
           </div>
@@ -139,33 +141,33 @@ export const BoutiqueBooking: React.FC = () => {
           <div>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <span className="badge-gold" style={{ marginBottom: '0.5rem' }}>PRIVATE SALON VIEWING</span>
-              <h2 style={{ fontSize: '2.2rem', fontFamily: 'var(--font-serif)' }}>
-                Book a VIP <span className="text-gold-gradient">Boutique Consultation</span>
+              <h2 style={{ fontSize: '2.2rem', fontFamily: 'var(--font-serif)', color: '#0F3E36' }}>
+                Book a VIP Consultation
               </h2>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.35rem' }}>
-                Enjoy champagne, private vault access, and dedicated assistance from a Scarlet Senior Gemologist.
+              <p style={{ color: '#5A6B63', fontSize: '0.85rem', marginTop: '0.35rem' }}>
+                Enjoy dedicated assistance from a Scarlet Senior Gemologist and private collection viewing.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
                     Full Name *
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Lady / Lord Harrington"
+                    placeholder="Enter your full name"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
@@ -173,7 +175,7 @@ export const BoutiqueBooking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
                     Email Address *
                   </label>
                   <input
@@ -185,10 +187,10 @@ export const BoutiqueBooking: React.FC = () => {
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
@@ -198,22 +200,22 @@ export const BoutiqueBooking: React.FC = () => {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
                     Phone / WhatsApp *
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="+41 22 819 0000"
+                    placeholder="+92 300 0000000"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
@@ -221,7 +223,7 @@ export const BoutiqueBooking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
                     Boutique Location *
                   </label>
                   <select
@@ -230,26 +232,24 @@ export const BoutiqueBooking: React.FC = () => {
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
                   >
-                    <option value="Geneva Atelier & Flagship">Geneva Atelier & Flagship (Switzerland)</option>
-                    <option value="Paris Place Vendôme Salon">Paris Place Vendôme Salon (France)</option>
-                    <option value="Dubai Mall Fashion Avenue">Dubai Mall Fashion Avenue (UAE)</option>
-                    <option value="London New Bond Street">London New Bond Street (UK)</option>
-                    <option value="New York Fifth Avenue">New York Fifth Avenue (USA)</option>
+                    <option value="Lahore Atelier & Boutique">Lahore Atelier & Boutique</option>
+                    <option value="Karachi Flagship Salon">Karachi Flagship Salon</option>
+                    <option value="Islamabad Executive Suite">Islamabad Executive Suite</option>
                   </select>
                 </div>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
                     Preferred Date *
                   </label>
                   <input
@@ -260,10 +260,10 @@ export const BoutiqueBooking: React.FC = () => {
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
@@ -271,46 +271,44 @@ export const BoutiqueBooking: React.FC = () => {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
-                    Preferred Time Slot *
+                  <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
+                    Preferred Time *
                   </label>
-                  <select
+                  <input
+                    type="time"
+                    required
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
                     style={{
                       width: '100%',
                       padding: '0.65rem 0.85rem',
-                      backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                      border: '1px solid var(--gold-border)',
+                      backgroundColor: '#FAF5EE',
+                      border: '1px solid rgba(163, 131, 73, 0.3)',
                       borderRadius: 'var(--radius-sm)',
-                      color: 'var(--text-primary)',
+                      color: '#0F3E36',
                       fontSize: '0.85rem',
                       outline: 'none',
                     }}
-                  >
-                    <option value="11:00 AM">11:00 AM - Morning Champagne</option>
-                    <option value="14:00 PM">02:00 PM - Afternoon Tea</option>
-                    <option value="17:00 PM">05:00 PM - Evening Vault Access</option>
-                  </select>
+                  />
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--gold-light)', marginBottom: '0.35rem' }}>
-                  Interest / Special Requests
+                <label style={{ display: 'block', fontSize: '0.75rem', color: '#A38349', fontWeight: 600, marginBottom: '0.35rem' }}>
+                  Special Requests / Notes
                 </label>
                 <textarea
                   rows={3}
-                  placeholder="e.g. Bespoke 5ct Muzo Emerald Ring, Custom Bridal Solitaire, Private High Horology Watch viewing..."
+                  placeholder="Tell us if you wish to see specific ring sizes or watch models..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   style={{
                     width: '100%',
                     padding: '0.65rem 0.85rem',
-                    backgroundColor: 'rgba(7, 10, 8, 0.7)',
-                    border: '1px solid var(--gold-border)',
+                    backgroundColor: '#FAF5EE',
+                    border: '1px solid rgba(163, 131, 73, 0.3)',
                     borderRadius: 'var(--radius-sm)',
-                    color: 'var(--text-primary)',
+                    color: '#0F3E36',
                     fontSize: '0.85rem',
                     outline: 'none',
                     resize: 'none',
@@ -318,9 +316,9 @@ export const BoutiqueBooking: React.FC = () => {
                 />
               </div>
 
-              <button type="submit" className="btn-gold" style={{ width: '100%', marginTop: '0.5rem' }}>
-                <Calendar size={18} />
-                <span>Confirm VIP Consultation</span>
+              <button type="submit" className="btn-emerald" style={{ width: '100%', marginTop: '0.5rem' }}>
+                <Calendar size={16} />
+                <span>Confirm VIP Appointment</span>
               </button>
             </form>
           </div>

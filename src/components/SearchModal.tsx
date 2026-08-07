@@ -32,7 +32,7 @@ export const SearchModal: React.FC = () => {
         position: 'fixed',
         inset: 0,
         zIndex: 2400,
-        backgroundColor: 'rgba(5, 8, 6, 0.92)',
+        backgroundColor: 'rgba(15, 62, 54, 0.7)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         display: 'flex',
@@ -59,7 +59,7 @@ export const SearchModal: React.FC = () => {
             right: '0',
             background: 'transparent',
             border: 'none',
-            color: 'var(--text-primary)',
+            color: '#FFFFFF',
             cursor: 'pointer',
           }}
         >
@@ -68,7 +68,7 @@ export const SearchModal: React.FC = () => {
 
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <span className="badge-gold" style={{ marginBottom: '0.5rem' }}>HAUTE SEARCH</span>
-          <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-serif)' }}>Search Our Archive</h2>
+          <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-serif)', color: '#FFFFFF' }}>Search Our Archive</h2>
         </div>
 
         {/* Input Field */}
@@ -85,7 +85,7 @@ export const SearchModal: React.FC = () => {
               left: '1.2rem',
               top: '50%',
               transform: 'translateY(-50%)',
-              color: 'var(--gold-primary)',
+              color: '#A38349',
             }}
           />
           <input
@@ -99,11 +99,11 @@ export const SearchModal: React.FC = () => {
               padding: '1.1rem 1.2rem 1.1rem 3.2rem',
               fontSize: '1.1rem',
               fontFamily: 'var(--font-sans)',
-              backgroundColor: 'rgba(14, 26, 20, 0.9)',
-              border: '1px solid var(--gold-primary)',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #A38349',
               borderRadius: 'var(--radius-md)',
-              color: 'var(--text-primary)',
-              boxShadow: 'var(--shadow-gold)',
+              color: '#0F3E36',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
               outline: 'none',
             }}
           />
@@ -111,19 +111,19 @@ export const SearchModal: React.FC = () => {
 
         {/* Search Suggestions or Results */}
         {!term ? (
-          <div style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+          <div style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.75rem', color: '#FAF5EE' }}>
             <span>Popular Searches:</span>
             <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
-              {['Colombian Emerald', 'Oval Solitaire', 'High Horology', 'Diamond Choker', '18K Yellow Gold'].map((suggest) => (
+              {['Emerald', 'Solitaire Ring', 'Gold Watch', 'Choker', 'Bracelet Stack'].map((suggest) => (
                 <button
                   key={suggest}
                   onClick={() => setTerm(suggest)}
                   style={{
                     padding: '0.4rem 0.8rem',
-                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                    border: '1px solid var(--gold-border)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                    border: '1px solid rgba(163, 131, 73, 0.4)',
                     borderRadius: 'var(--radius-full)',
-                    color: 'var(--gold-light)',
+                    color: '#FFFFFF',
                     fontSize: '0.75rem',
                     cursor: 'pointer',
                   }}
@@ -135,7 +135,7 @@ export const SearchModal: React.FC = () => {
           </div>
         ) : (
           <div style={{ maxHeight: '55vh', overflowY: 'auto' }}>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
+            <div style={{ fontSize: '0.8rem', color: '#FAF5EE', marginBottom: '1rem' }}>
               Found {matches.length} matching piece{matches.length === 1 ? '' : 's'}
             </div>
 
@@ -147,38 +147,29 @@ export const SearchModal: React.FC = () => {
                     setQuickViewProduct(product);
                     setIsSearchOpen(false);
                   }}
-                  className="glass-card"
                   style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: '14px',
+                    padding: '0.85rem 1rem',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '1rem',
-                    padding: '0.85rem',
+                    justifyContent: 'space-between',
                     cursor: 'pointer',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
                   }}
                 >
-                  <img
-                    src={product.primaryImage}
-                    alt={product.name}
-                    style={{
-                      width: '60px',
-                      height: '60px',
-                      objectFit: 'cover',
-                      borderRadius: 'var(--radius-sm)',
-                    }}
-                  />
-
-                  <div style={{ flexGrow: 1 }}>
-                    <h4 style={{ fontSize: '1.1rem', fontFamily: 'var(--font-serif)', color: 'var(--text-primary)' }}>
-                      {product.name}
-                    </h4>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      {product.specifications.metal} &bull; {product.specifications.gemstone || product.category}
-                    </span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <img
+                      src={product.primaryImage}
+                      alt={product.name}
+                      style={{ width: '48px', height: '48px', objectFit: 'contain', borderRadius: '8px' }}
+                    />
+                    <div>
+                      <h4 style={{ fontSize: '0.95rem', color: '#0F3E36', fontWeight: 600 }}>{product.name}</h4>
+                      <span style={{ fontSize: '0.75rem', color: '#72847C' }}>{product.subtitle}</span>
+                    </div>
                   </div>
-
-                  <span style={{ fontSize: '1.1rem', color: 'var(--gold-light)', fontFamily: 'var(--font-serif)', fontWeight: 600 }}>
-                    {formatPrice(product.priceUSD)}
-                  </span>
+                  <span style={{ fontSize: '0.95rem', color: '#A38349', fontWeight: 700 }}>{formatPrice(product.priceUSD)}</span>
                 </div>
               ))}
             </div>

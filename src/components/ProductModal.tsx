@@ -25,7 +25,7 @@ export const ProductModal: React.FC = () => {
         position: 'fixed',
         inset: 0,
         zIndex: 2000,
-        backgroundColor: 'rgba(0, 0, 0, 0.85)',
+        backgroundColor: 'rgba(15, 62, 54, 0.6)',
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
         display: 'flex',
@@ -45,10 +45,10 @@ export const ProductModal: React.FC = () => {
           overflowY: 'auto',
           position: 'relative',
           padding: '2rem',
-          backgroundColor: '#0F0F0F',
-          border: '1px solid rgba(230, 198, 135, 0.3)',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid rgba(163, 131, 73, 0.35)',
           borderRadius: '20px',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.9)',
+          boxShadow: '0 20px 50px rgba(15, 62, 54, 0.15)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -59,9 +59,9 @@ export const ProductModal: React.FC = () => {
             position: 'absolute',
             top: '1.2rem',
             right: '1.2rem',
-            background: 'rgba(255, 255, 255, 0.1)',
+            background: '#FAF5EE',
             border: 'none',
-            color: '#FFFFFF',
+            color: '#0F3E36',
             width: '34px',
             height: '34px',
             borderRadius: '50%',
@@ -100,7 +100,7 @@ export const ProductModal: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '1.5rem',
-                border: '1px solid rgba(230, 198, 135, 0.2)',
+                border: '1px solid rgba(163, 131, 73, 0.25)',
               }}
             >
               <img
@@ -127,7 +127,7 @@ export const ProductModal: React.FC = () => {
                       borderRadius: '8px',
                       overflow: 'hidden',
                       cursor: 'pointer',
-                      border: selectedImageIndex === idx ? '2px solid #E6C687' : '1px solid rgba(255, 255, 255, 0.2)',
+                      border: selectedImageIndex === idx ? '2px solid #A38349' : '1px solid rgba(163, 131, 73, 0.2)',
                       backgroundColor: '#FFFFFF',
                       padding: '0.2rem',
                     }}
@@ -144,7 +144,7 @@ export const ProductModal: React.FC = () => {
             <span
               style={{
                 fontSize: '0.72rem',
-                color: '#E6C687',
+                color: '#A38349',
                 fontWeight: 700,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
@@ -158,7 +158,7 @@ export const ProductModal: React.FC = () => {
               style={{
                 fontSize: '1.8rem',
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                color: '#FFFFFF',
+                color: '#0F3E36',
                 fontWeight: 600,
                 marginBottom: '0.4rem',
                 lineHeight: 1.2,
@@ -171,28 +171,28 @@ export const ProductModal: React.FC = () => {
               <span
                 style={{
                   fontSize: '1.25rem',
-                  color: '#FFFFFF',
+                  color: '#0F3E36',
                   fontWeight: 700,
                 }}
               >
                 {formatPrice(quickViewProduct.priceUSD)}
               </span>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#E0C896', fontSize: '0.8rem' }}>
-                <Star size={14} fill="#E0C896" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: '#A38349', fontSize: '0.8rem' }}>
+                <Star size={14} fill="#A38349" />
                 <span>{quickViewProduct.rating} ({quickViewProduct.reviewsCount} Reviews)</span>
               </div>
             </div>
 
-            <p style={{ fontSize: '0.88rem', color: 'rgba(255, 255, 255, 0.7)', lineHeight: 1.5, marginBottom: '1.2rem' }}>
+            <p style={{ fontSize: '0.88rem', color: '#455850', lineHeight: 1.5, marginBottom: '1.2rem' }}>
               {quickViewProduct.description}
             </p>
 
             {/* Simple Specifications List */}
             <div
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backgroundColor: '#FAF5EE',
+                border: '1px solid rgba(163, 131, 73, 0.25)',
                 borderRadius: '12px',
                 padding: '0.85rem 1rem',
                 marginBottom: '1.5rem',
@@ -203,13 +203,13 @@ export const ProductModal: React.FC = () => {
               }}
             >
               <div>
-                <span style={{ color: 'rgba(255, 255, 255, 0.5)' }}>Metal:</span>{' '}
-                <strong style={{ color: '#FFFFFF' }}>{quickViewProduct.specifications.metal}</strong>
+                <span style={{ color: '#72847C' }}>Metal:</span>{' '}
+                <strong style={{ color: '#0F3E36' }}>{quickViewProduct.specifications.metal}</strong>
               </div>
               {quickViewProduct.specifications.gemstone && (
                 <div>
-                  <span style={{ color: 'rgba(255, 255, 255, 0.5)' }}>Gemstone:</span>{' '}
-                  <strong style={{ color: '#FFFFFF' }}>{quickViewProduct.specifications.gemstone}</strong>
+                  <span style={{ color: '#72847C' }}>Gemstone:</span>{' '}
+                  <strong style={{ color: '#0F3E36' }}>{quickViewProduct.specifications.gemstone}</strong>
                 </div>
               )}
             </div>
@@ -223,9 +223,9 @@ export const ProductModal: React.FC = () => {
                 }}
                 style={{
                   flex: '1 1 45%',
-                  background: 'linear-gradient(135deg, #FAF0D9 0%, #E6C687 50%, #C59E4E 100%)',
-                  color: '#070A08',
-                  border: 'none',
+                  background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
+                  color: '#FFFFFF',
+                  border: '1px solid #A38349',
                   padding: '0.8rem 1.2rem',
                   borderRadius: '999px',
                   fontSize: '0.8rem',
@@ -237,7 +237,7 @@ export const ProductModal: React.FC = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '0.4rem',
-                  boxShadow: '0 4px 15px rgba(230, 198, 135, 0.3)',
+                  boxShadow: '0 4px 15px rgba(15, 62, 54, 0.2)',
                 }}
               >
                 <ShoppingBag size={15} />
@@ -250,9 +250,9 @@ export const ProductModal: React.FC = () => {
                 }}
                 style={{
                   flex: '1 1 40%',
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  color: '#FFFFFF',
-                  border: '1px solid rgba(230, 198, 135, 0.35)',
+                  backgroundColor: '#FAF5EE',
+                  color: '#0F3E36',
+                  border: '1px solid #A38349',
                   padding: '0.8rem 1rem',
                   borderRadius: '999px',
                   fontSize: '0.78rem',
@@ -270,15 +270,15 @@ export const ProductModal: React.FC = () => {
               <button
                 onClick={() => toggleWishlist(quickViewProduct.id)}
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(230, 198, 135, 0.3)',
+                  backgroundColor: '#FAF5EE',
+                  border: '1px solid rgba(163, 131, 73, 0.3)',
                   borderRadius: '50%',
                   width: '44px',
                   height: '44px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: isSaved ? '#C81E1E' : '#FFFFFF',
+                  color: isSaved ? '#C81E1E' : '#0F3E36',
                   cursor: 'pointer',
                   flexShrink: 0,
                   transition: 'transform 0.2s ease',

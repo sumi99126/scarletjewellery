@@ -10,5 +10,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <WizzTechProtectionProvider platformUrl="https://wizztech-demo-website-platform.netlify.app">
       <App />
     </WizzTechProtectionProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

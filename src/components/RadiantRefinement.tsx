@@ -10,16 +10,17 @@ export const RadiantRefinement: React.FC = () => {
     <section
       id="radiant-refinement-section"
       style={{
-        backgroundColor: '#000000',
+        background: 'linear-gradient(135deg, #092B24 0%, #0F3E36 100%)',
         padding: '3.5rem 1.5rem 4.5rem 1.5rem',
         position: 'relative',
         overflow: 'hidden',
         maxWidth: '100vw',
         width: '100%',
+        boxShadow: 'inset 0 0 50px rgba(0,0,0,0.2)',
       }}
     >
       <div className="container" style={{ maxWidth: '1360px', margin: '0 auto' }}>
-        {/* 3-Column Asymmetric Layout - Narrow Image Widths & Clean Design matching Reference */}
+        {/* 3-Column Asymmetric Layout */}
         <div
           style={{
             display: 'grid',
@@ -29,7 +30,7 @@ export const RadiantRefinement: React.FC = () => {
           }}
           className="radiant-grid"
         >
-          {/* Left Column: Taller Image Card (Narrow Width, Rating Badge, NO Bottom Text) */}
+          {/* Left Column: Taller Image Card */}
           <ScrollReveal animation="slide-left" delay={0}>
           <div
             style={{
@@ -37,21 +38,21 @@ export const RadiantRefinement: React.FC = () => {
               borderRadius: '20px',
               overflow: 'hidden',
               height: '320px',
-              border: '1px solid rgba(230, 198, 135, 0.25)',
-              boxShadow: '0 15px 35px rgba(0, 0, 0, 0.85)',
-              backgroundColor: '#070A08',
+              border: '1px solid rgba(163, 131, 73, 0.4)',
+              boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4)',
+              backgroundColor: '#092B24',
             }}
             className="radiant-card-left"
           >
-            {/* Rating Badge Top Left matching Reference Image */}
+            {/* Rating Badge Top Left */}
             <div
               style={{
                 position: 'absolute',
                 top: '0.85rem',
                 left: '0.85rem',
-                backgroundColor: 'rgba(7, 10, 8, 0.85)',
+                backgroundColor: 'rgba(9, 43, 36, 0.85)',
                 backdropFilter: 'blur(8px)',
-                border: '1px solid rgba(230, 198, 135, 0.3)',
+                border: '1px solid rgba(163, 131, 73, 0.5)',
                 borderRadius: '999px',
                 padding: '0.3rem 0.7rem',
                 display: 'flex',
@@ -60,9 +61,9 @@ export const RadiantRefinement: React.FC = () => {
                 zIndex: 3,
               }}
             >
-              <div style={{ display: 'flex', gap: '0.1rem', color: '#E0C896' }}>
+              <div style={{ display: 'flex', gap: '0.1rem', color: '#C8AA6E' }}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} fill="#E0C896" />
+                  <Star key={i} size={11} fill="#C8AA6E" />
                 ))}
               </div>
               <span style={{ color: '#FFFFFF', fontSize: '0.68rem', fontWeight: 700 }}>
@@ -70,7 +71,7 @@ export const RadiantRefinement: React.FC = () => {
               </span>
             </div>
 
-            {/* Display Stand Photo (Clean Image, No Bottom Text) */}
+            {/* Display Stand Photo */}
             <img
               src="/img/display_stand.png"
               alt="Art of Radiant Refinement"
@@ -86,7 +87,7 @@ export const RadiantRefinement: React.FC = () => {
           </div>
           </ScrollReveal>
 
-          {/* Center Column: Clean Heading, Richer Paragraph Text & Simple Pill Button */}
+          {/* Center Column: Clean Heading, Richer Paragraph Text */}
           <ScrollReveal animation="fade-up" delay={200}>
           <div style={{ padding: '0 1rem' }}>
             <h2
@@ -104,10 +105,10 @@ export const RadiantRefinement: React.FC = () => {
               Special Moment
             </h2>
 
-            {/* Richer Sub-Text Paragraph matching Reference Image */}
+            {/* Sub-Text Paragraph */}
             <p
               style={{
-                color: 'rgba(255, 255, 255, 0.72)',
+                color: 'rgba(255, 255, 255, 0.85)',
                 fontSize: '0.92rem',
                 lineHeight: 1.65,
                 fontFamily: 'var(--font-sans)',
@@ -118,13 +119,13 @@ export const RadiantRefinement: React.FC = () => {
               Exquisite fashion jewelry pieces designed to celebrate life's most precious moments. Crafted with premium gold plating, anti-tarnish finish, and brilliant crystal gemstones. Created to bring timeless elegance, exceptional luster, and unmatched sophistication to your personal collection.
             </p>
 
-            {/* Clean Simple Rounded Pill Button matching Reference */}
+            {/* Clean Simple Rounded Pill Button */}
             <button
               onClick={() => setIsBookingOpen(true)}
               style={{
                 background: 'transparent',
                 color: '#FFFFFF',
-                border: '1px solid rgba(255, 255, 255, 0.35)',
+                border: '1px solid #A38349',
                 padding: '0.65rem 1.8rem',
                 borderRadius: '999px',
                 fontSize: '0.78rem',
@@ -144,7 +145,7 @@ export const RadiantRefinement: React.FC = () => {
           </div>
           </ScrollReveal>
 
-          {/* Right Column: Shorter Height & Narrower Width Image Card (NO Bottom Text) */}
+          {/* Right Column: Shorter Height Card */}
           <ScrollReveal animation="slide-right" delay={400}>
           <div
             style={{
@@ -152,14 +153,14 @@ export const RadiantRefinement: React.FC = () => {
               borderRadius: '20px',
               overflow: 'hidden',
               height: '210px',
-              border: '1px solid rgba(230, 198, 135, 0.25)',
-              boxShadow: '0 15px 35px rgba(0, 0, 0, 0.85)',
-              backgroundColor: '#070A08',
+              border: '1px solid rgba(163, 131, 73, 0.4)',
+              boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4)',
+              backgroundColor: '#092B24',
               alignSelf: 'center',
             }}
             className="radiant-card-right"
           >
-            {/* Emerald Ring Box Photo (Clean Image, No Bottom Text) */}
+            {/* Emerald Ring Box Photo */}
             <img
               src="/img/emerald_ring_box.png"
               alt="Emerald Ring Close-up"
@@ -183,9 +184,9 @@ export const RadiantRefinement: React.FC = () => {
           transform: scale(1.06);
         }
         .clean-pill-btn:hover {
-          border-color: #E6C687 !important;
-          color: #E6C687 !important;
-          background: rgba(230, 198, 135, 0.08) !important;
+          border-color: #C8AA6E !important;
+          color: #C8AA6E !important;
+          background: rgba(163, 131, 73, 0.2) !important;
         }
         @media (max-width: 1024px) {
           .radiant-grid {
